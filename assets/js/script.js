@@ -74,3 +74,54 @@ function imageData() {
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
+
+  /**
+  *  Generate cards to be able to append them to HTML document structure.
+  */
+
+ function generateCards() {
+    closeModals();
+    const gameCardData = randomize(); //gameCardData gets randomized array
+    
+    gameCardData.forEach((item) => //run through array and add elements, classes, id and images to each item in array
+     {
+         const card = document.createElement('div');
+         const front = document.createElement('img');
+         const back = document.createElement('img');
+         card.classList = 'card';
+         front.classList = 'front';
+         back.classList = 'back';
+         //Add image on each front and back card in array
+         front.src = item.imgSrc;
+         back.src = "../assets/images/card_back.png";
+         //Add id to each card in array
+         card.setAttribute('id', item.id);
+         //Attach cards to section
+         section.appendChild(card);
+         card.appendChild(front);
+         card.appendChild(back);
+         //add event listener that waits for the event 'click' and then call function userFlippedCard()
+         card.addEventListener('click', userFlippedCard);        
+     });
+     
+ }
+
+ /**
+ * Function checks if card has been clicked and adds class of cardFlipped to it. Function also saves the
+ * clicked pairs in variables cardOne and cardTwo. Also includes check if one click already has been made.
+ */
+function userFlippedCard(){
+   
+    if (gamingBoardLocked) return;
+    if (this === cardOne) return;
+        this.classList.add('cardFlipped');
+    if (!cardFlipped) {
+        cardFlipped = true;
+        cardOne = this;
+        return;       
+    }
+    // Catch users second click
+    cardTwo = this;
+    //Check if we have a match
+    checkCards();
+}
