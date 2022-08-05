@@ -58,14 +58,42 @@ body {
     border-radius: 10px;
 }
 
-
 .points,
 .tries,
 .rounds {
     padding: .7rem .7rem .7rem .7rem;
 }
 
+/* memory board area */
 
+.game-background{
+    
+    background: url("../images/game_background.png") center center/contain no-repeat;
+    background-size:80%;
+    padding: 200px 0;
+}
+
+#memory-board {
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+    padding: 100px 0 0 0;
+    justify-content: center;
+    perspective: 1000px;
+    min-height: 320px;
+}
+
+/* memory card design */
+.card {
+    width: 115px;
+    height: 155px;
+    margin: 5px;
+    position: relative;
+    background: transparent;
+    border: none;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    }
 
 /* modals section */
 
