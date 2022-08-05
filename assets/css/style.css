@@ -50,6 +50,21 @@ body {
 
 /* scoreboard area */
 
+.score-board-text {
+    color: #0B0505;
+    background-color: #c1bfc6;
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.points,
+.tries,
+.rounds {
+    padding: .7rem .7rem .7rem .7rem;
+}
+
 
 
 /* modals section */
