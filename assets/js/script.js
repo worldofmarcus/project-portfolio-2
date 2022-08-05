@@ -159,3 +159,16 @@ function checkCards() {
         }, 1400);
     }
 }
+
+/**
+ * Function removes class 'cardFlipped' from cardOne and cardTwo so that they flip back (through CSS). Also sets the gamingBoard lock to true
+ * so that cards cannot be pressed until the cards have been 'unflipped'.
+ * */
+function unflipCards() {
+    gamingBoardLocked = true;
+    setTimeout(() => {
+        cardOne.classList.remove('cardFlipped');
+        cardTwo.classList.remove('cardFlipped');
+        resetBoard();
+    }, 1400);
+}
