@@ -5,51 +5,51 @@ let cardOne, cardTwo;
 
 function imageData() {
     return [{
-            imgSrc: "../assets/images/card_key_1.png",
+            imgSrc: "assets/images/card_key_1.png",
             id: "card_key_1"
         },
         {
-            imgSrc: "../assets/images/card_key_2.png",
+            imgSrc: "assets/images/card_key_2.png",
             id: "card_key_2"
         },
         {
-            imgSrc: "../assets/images/card_key_3.png",
+            imgSrc: "assets/images/card_key_3.png",
             id: "card_key_3"
         },
         {
-            imgSrc: "../assets/images/card_key_4.png",
+            imgSrc: "assets/images/card_key_4.png",
             id: "card_key_4"
         },
         {
-            imgSrc: "../assets/images/card_key_5.png",
+            imgSrc: "assets/images/card_key_5.png",
             id: "card_key_5"
         },
         {
-            imgSrc: "../assets/images/card_diamond.png",
+            imgSrc: "assets/images/card_diamond.png",
             id: "card_diamond"
         },
         {
-            imgSrc: "../assets/images/card_key_1.png",
+            imgSrc: "assets/images/card_key_1.png",
             id: "card_key_1"
         },
         {
-            imgSrc: "../assets/images/card_key_2.png",
+            imgSrc: "assets/images/card_key_2.png",
             id: "card_key_2"
         },
         {
-            imgSrc: "../assets/images/card_key_3.png",
+            imgSrc: "assets/images/card_key_3.png",
             id: "card_key_3"
         },
         {
-            imgSrc: "../assets/images/card_key_4.png",
+            imgSrc: "assets/images/card_key_4.png",
             id: "card_key_4"
         },
         {
-            imgSrc: "../assets/images/card_key_5.png",
+            imgSrc: "assets/images/card_key_5.png",
             id: "card_key_5"
         },
         {
-            imgSrc: "../assets/images/card_diamond.png",
+            imgSrc: "assets/images/card_diamond.png",
             id: "card_diamond"
         },
     ];
@@ -92,7 +92,7 @@ function generateCards() {
             back.classList = 'back';
             //Add image on each front and back card in array
             front.src = item.imgSrc;
-            back.src = "../assets/images/card_back.png";
+            back.src = "assets/images/card_back.png";
             //Add id to each card in array
             card.setAttribute('id', item.id);
             //Attach cards to section
