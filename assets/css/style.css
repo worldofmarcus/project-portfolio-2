@@ -152,6 +152,8 @@ body {
     .game-background {
         padding-top: 100px;
     }
+    
+    
 }
 
 @media (max-width: 410px) {
@@ -196,3 +198,4 @@ body {
 #memory-board {
     padding: 0 0 0 0;
 }
+
