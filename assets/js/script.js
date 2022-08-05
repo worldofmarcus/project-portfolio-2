@@ -78,7 +78,6 @@ function shuffle(array) {
 /**
  *  Generate cards to be able to append them to HTML document structure.
  */
-
 function generateCards() {
     closeModals();
     const gameCardData = randomize(); //gameCardData gets randomized array
@@ -176,7 +175,28 @@ function unflipCards() {
 /**
  * Function resets board (initial variables). This only happens when user has matched cards so that the game is ready for another round.
  * */
- function resetBoard() {
+function resetBoard() {
     [cardFlipped, gamingBoardLocked] = [false, false];
     [cardOne, cardTwo] = [null, null];
-    }
+}
+
+/**
+ * Function starts new game by resetting initial variables/scores and generating a new randomized array of cards.
+ * */
+function newGame() {
+    closeModals();
+    [cardFlipped, gamingBoardLocked] = [false, false];
+    [cardOne, cardTwo] = [null, null];
+    let gameCardData = randomize();
+    let front = document.querySelectorAll(".front");
+    let card = document.querySelectorAll('.card');
+    parseInt(document.getElementById('numberOfRounds').innerText = 0);
+    parseInt(document.getElementById('triesLeft').innerText = 5);
+    parseInt(document.getElementById('numberOfPoints').innerText = 0);
+    gameCardData.forEach((item, index) => {
+        card[index].classList.remove('cardFlipped');
+        card[index].classList.remove('not-clickable');
+        front[index].src = item.imgSrc;
+        card[index].setAttribute('id', item.id);
+    });
+}
