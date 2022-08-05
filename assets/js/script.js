@@ -109,9 +109,12 @@ function generateCards() {
  * clicked pairs in variables cardOne and cardTwo. Also includes check if one click already has been made.
  */
 function userFlippedCard() {
+
+   
     if (gamingBoardLocked) return;
     if (this === cardOne) return;
     this.classList.add('cardFlipped');
+
     flipCardAudio();
     if (!cardFlipped) {
         cardFlipped = true;
