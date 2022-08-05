@@ -91,6 +91,7 @@ body {
     position: relative;
     background: transparent;
     border: none;
+    transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
 }
@@ -114,6 +115,11 @@ body {
 
 .not-clickable {
     pointer-events: none;
+}
+
+.card:active {
+    transform: scale(0.95);
+    transition: .1s;
 }
 
 /* modals section */
@@ -152,8 +158,8 @@ body {
     .game-background {
         padding-top: 100px;
     }
-    
-    
+
+
 }
 
 @media (max-width: 410px) {
@@ -198,4 +204,3 @@ body {
 #memory-board {
     padding: 0 0 0 0;
 }
-

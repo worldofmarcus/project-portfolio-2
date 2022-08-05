@@ -10,12 +10,7 @@ let complete = new Audio("assets/audio/audio_complete.mp3");
  * Function plays sound when user flips card
  * */
 function flipCardAudio() {
-
-    setTimeout(() => {
-        cardFlip.play();
-      }, "150")
-
-    
+    cardFlip.play();
 }
 
 /**
