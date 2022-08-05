@@ -11,7 +11,10 @@ let complete = new Audio("assets/audio/audio_complete.mp3");
  * */
 function flipCardAudio() {
 
-    setTimeout(function(){$('cardFlip').play}, 950)
+    setTimeout(() => {
+        cardFlip.play();
+      }, "150")
+
     
 }
 
