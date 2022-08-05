@@ -110,7 +110,6 @@ function generateCards() {
  * clicked pairs in variables cardOne and cardTwo. Also includes check if one click already has been made.
  */
 function userFlippedCard() {
-
     if (gamingBoardLocked) return;
     if (this === cardOne) return;
     this.classList.add('cardFlipped');
@@ -128,7 +127,6 @@ function userFlippedCard() {
 /**
  * Function checks if cardOne and cardTwo matches eachother and also keeps track of users score.
  */
-
 function checkCards() {
     let numberOfRounds = parseInt(document.getElementById('numberOfRounds').innerText);
     let triesLeft = document.getElementById('triesLeft').innerText;
@@ -161,4 +159,3 @@ function checkCards() {
         }, 1400);
     }
 }
-
