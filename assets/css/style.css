@@ -104,12 +104,45 @@ body {
   backface-visibility: hidden;
 }
 
+.card.cardFlipped{
+    transform: rotateX(180deg);
+  }
+
+.front{
+    transform: rotateX(180deg);
+  }
+
+  .not-clickable{
+    pointer-events: none;
+  }
+
 /* modals section */
 
 #modal-welcome-title {
     font-size: 2rem;
     text-transform: uppercase;
 }
+
+.modal-content {
+    background-color:#c1bfc6; 
+    color: rgba(11, 5, 5);
+    border: solid 2px #c1bfc6;  
+}
+
+.modal-header,
+.modal-footer {
+    border: 0;
+}
+
+.start-game-button {
+    font-size: 1.2rem;
+    background-color: #500303;
+    border: 1px solid black;
+    color: #c1bfc6;
+    border-radius: 5px;
+    border: 1px solid #c1bfc6;
+}
+
 
 
 /* ==============
