@@ -46,9 +46,8 @@ body {
 
 .logo-queen {
     height: 25vh;
-    background: url("assets/images/logo.png") center center/contain no-repeat;
+    background: url("../images/logo.png") center center/contain no-repeat;
 }
-
 
 /* scoreboard area */
 
@@ -69,7 +68,7 @@ body {
 /* memory board area */
 
 .game-background {
-    background: url("assets/images/game_background.png") center center/contain no-repeat;
+    background: url("../images/game_background.png") center center/contain no-repeat;
     padding: 200px 0;
 }
 
