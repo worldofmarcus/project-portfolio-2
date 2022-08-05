@@ -112,6 +112,7 @@ function userFlippedCard() {
     if (gamingBoardLocked) return;
     if (this === cardOne) return;
     this.classList.add('cardFlipped');
+    flipCardAudio();
     if (!cardFlipped) {
         cardFlipped = true;
         cardOne = this;
@@ -134,14 +135,17 @@ function checkCards() {
     if (cardOne.id === cardTwo.id) {
         cardOne.classList.add('not-clickable');
         cardTwo.classList.add('not-clickable');
+
         parseInt(document.getElementById('numberOfRounds').innerText = ++numberOfRounds);
         parseInt(document.getElementById('numberOfPoints').innerText = ++numberOfPoints);
+        matchAudio();
 
         //Check if player has found all pair of cards.
         const checkWin = document.querySelectorAll('.cardFlipped');
         setTimeout(() => {
             if (checkWin.length === 12) {
                 congratulationsModal();
+                gameCompleteAudio();
             }
         }, 1400);
         resetBoard();
@@ -153,6 +157,7 @@ function checkCards() {
         //Check if there are any remaining tries for player.
         setTimeout(() => {
             if (triesLeft === 0) {
+                gameOverAudio();
                 gameoverModal();
             }
         }, 1400);
@@ -169,6 +174,7 @@ function unflipCards() {
         cardOne.classList.remove('cardFlipped');
         cardTwo.classList.remove('cardFlipped');
         resetBoard();
+        noMatchAudio();
     }, 1400);
 }
 
