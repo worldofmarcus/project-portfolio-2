@@ -172,3 +172,11 @@ function unflipCards() {
         resetBoard();
     }, 1400);
 }
+
+/**
+ * Function resets board (initial variables). This only happens when user has matched cards so that the game is ready for another round.
+ * */
+ function resetBoard() {
+    [cardFlipped, gamingBoardLocked] = [false, false];
+    [cardOne, cardTwo] = [null, null];
+    }
