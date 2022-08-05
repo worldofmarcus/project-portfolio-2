@@ -66,10 +66,10 @@ body {
 
 /* memory board area */
 
-.game-background{
-    
+.game-background {
+
     background: url("../images/game_background.png") center center/contain no-repeat;
-    background-size:80%;
+    background-size: 80%;
     padding: 200px 0;
 }
 
@@ -93,28 +93,28 @@ body {
     border: none;
     transform-style: preserve-3d;
     transition: transform .5s;
-    }
-
-    .front,
-.back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border-radius: 5px;
-  backface-visibility: hidden;
 }
 
-.card.cardFlipped{
-    transform: rotateX(180deg);
-  }
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
 
-.front{
+.card.cardFlipped {
     transform: rotateX(180deg);
-  }
+}
 
-  .not-clickable{
+.front {
+    transform: rotateX(180deg);
+}
+
+.not-clickable {
     pointer-events: none;
-  }
+}
 
 /* modals section */
 
@@ -124,9 +124,9 @@ body {
 }
 
 .modal-content {
-    background-color:#c1bfc6; 
+    background-color: #c1bfc6;
     color: rgba(11, 5, 5);
-    border: solid 2px #c1bfc6;  
+    border: solid 2px #c1bfc6;
 }
 
 .modal-header,
@@ -143,10 +143,56 @@ body {
     border: 1px solid #c1bfc6;
 }
 
-
-
 /* ==============
    media queries
    ============== */
 
-/* min-width 951px */
+@media (max-width: 690px) {
+
+    .game-background {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 410px) {
+    .card {
+        width: 82px;
+        height: 110px;
+    }
+
+    .game-background {
+        background-size: 100%;
+        padding: 90px 0 0 0;
+    }
+}
+
+@media (max-width: 325px) {
+    .card {
+        width: 60px;
+        height: 88px;
+    }
+
+    .game-background {
+        padding: 80px 0 0 0;
+    }
+}
+
+#memory-board {
+    padding: 0 0 0 0;
+}
+
+@media (max-width: 319px) {
+    .card {
+        width: 50px;
+        height: 78px;
+    }
+
+    .game-background {
+        background: none;
+        padding: 0 0 0 0;
+    }
+}
+
+#memory-board {
+    padding: 0 0 0 0;
+}
