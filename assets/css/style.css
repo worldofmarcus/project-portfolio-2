@@ -88,8 +88,10 @@ body {
 .game-background {
     background: url("../images/game_background.png") center center/contain no-repeat;
     padding: 200px 0;
-
 }
+ 
+
+
 
 #memory-board {
     flex-wrap: wrap;
@@ -152,6 +154,7 @@ body {
 }
 
 .modal-content {
+
     font-size: 1.8rem;
     background-image: linear-gradient(#f4f4f4, #AAA6B2);
     color: rgba(11, 5, 5);
