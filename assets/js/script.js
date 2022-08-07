@@ -1,4 +1,4 @@
-const section = document.querySelectorAll('div')[12];
+const section = document.querySelectorAll('div')[10];
 const levelHard = 5;
 const levelMedium = 8;
 const leveleasy= 12;
@@ -134,15 +134,11 @@ function userFlippedCard() {
  * Function checks if cardOne and cardTwo matches eachother and also keeps track of users score.
  */
 function checkCards() {
-    let numberOfRounds = parseInt(document.getElementById('numberOfRounds').innerText);
     let triesLeft = document.getElementById('triesLeft').innerText;
     let numberOfPoints = document.getElementById('numberOfPoints').innerText;
-
     if (cardOne.id === cardTwo.id) {
         cardOne.classList.add('not-clickable');
         cardTwo.classList.add('not-clickable');
-
-        parseInt(document.getElementById('numberOfRounds').innerText = ++numberOfRounds);
         parseInt(document.getElementById('numberOfPoints').innerText = ++numberOfPoints);
         matchAudio();
 
@@ -156,8 +152,7 @@ function checkCards() {
         }, 1400);
         resetBoard();
     } else {
-        parseInt(document.getElementById('numberOfRounds').innerText = ++numberOfRounds);
-        parseInt(document.getElementById('triesLeft').innerText = --triesLeft);
+         parseInt(document.getElementById('triesLeft').innerText = --triesLeft);
         unflipCards();
 
         //Check if there are any remaining tries for player.
@@ -202,7 +197,6 @@ function newGame() {
     let gameCardData = randomize();
     let front = document.querySelectorAll(".front");
     let card = document.querySelectorAll('.card');
-    parseInt(document.getElementById('numberOfRounds').innerText = 0);
     parseInt(document.getElementById('triesLeft').innerText = 5);
     parseInt(document.getElementById('numberOfPoints').innerText = 0);
     gameCardData.forEach((item, index) => {
