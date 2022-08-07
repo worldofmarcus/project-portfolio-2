@@ -1,4 +1,7 @@
-const section = document.querySelectorAll('div')[11];
+const section = document.querySelectorAll('div')[12];
+const levelHard = 5;
+const levelMedium = 8;
+const leveleasy= 12;
 let cardFlipped = false;
 let gamingBoardLocked = false;
 let cardOne, cardTwo;

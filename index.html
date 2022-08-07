@@ -33,7 +33,11 @@
                 <div class="score-board-text">Tries left: <span id="triesLeft">5</span></div>
             </div>
             <div class="rounds">
-                <div class="score-board-text">Rounds: <span id="numberOfRounds">0</span></div>
+                <div class="score-board-text">Highscore: <span id="numberOfRounds">0</span></div>
+            </div>
+            <div class="scoreboard-button">
+                <button class="score-board-text" onclick="$('#instructions-modal').modal('show')"
+                    id="button-instruction" aria-label="Reset Game">Instructions</button>
             </div>
         </div>
     </div>
@@ -80,6 +84,43 @@
             </div>
             <div class="modal-footer justify-content-center">
                 <button type="button" class="start-game-button" data-dismiss="modal" onclick="generateCards()">Start
+                    Game!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Instructions Modal (this modal is being launched when the user clicks on the instruction button in the scoreboard area) -->
+
+<div class="modal fade" id="instructions-modal" tabindex="-1" role="dialog" aria-labelledby="instructions-modal"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <h5 class="modal-title" id="modal-welcome-title">TEST of Queen Oblivion</h5>
+            </div>
+            <div class="modal-body text-justify">
+                <p>
+                    Welcome to 'Memory of Queen Oblivion', a game created for Portfolio Project #2 (JavaScript) -
+                    Diploma in
+                    Full Stack Software Development Diploma at the <a href="https://codeinstitute.net/se/"
+                        target="_blank">Code Institute.</a>
+                </p>
+                <p>
+                    Anyhow. I need your help! And I need your help fast! I'm sad to say that the evil queen of Oblivion
+                    has taken my precious
+                    diamond and all my keys that goes to the castles of my kingdom. She has cast a spell that has
+                    trapped the diamond and keys
+                    in pairs inside a set of cards (don't ask me why).
+                </p>
+                <p>
+                    The only way you can help me is to find all of the matching cards. When you have matched all cards
+                    you have saved me!
+                    Press the 'start game'-button to begin your journey. Good luck!
+                </p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="start-game-button" data-dismiss="modal" onclick="newGame()">Start
                     Game!</button>
             </div>
         </div>

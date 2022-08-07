@@ -61,7 +61,8 @@ body {
 
 .points,
 .tries,
-.rounds {
+.rounds,
+.scoreboard-button{
     padding: .7rem .7rem .7rem .7rem;
 }
 

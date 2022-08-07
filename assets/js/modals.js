@@ -5,6 +5,7 @@ $(window).on('load', function () {
 
 /** This function closes all modals when called */
 function closeModals() {
+    $('#instructions-modal').modal('hide');
     $('#welcome-modal').modal('hide');
     $('#game-over-modal').modal('hide');
     $('#congratulations-modal').modal('hide');
