@@ -1,10 +1,18 @@
 const section = document.querySelectorAll('div')[10];
 const levelHard = 5;
 const levelMedium = 8;
-const leveleasy= 12;
+const leveleasy = 12;
 let cardFlipped = false;
 let gamingBoardLocked = false;
 let cardOne, cardTwo;
+let difficultyLevel;
+// Function records users difficulty choice
+
+function levelChoice(event) {
+    difficultyLevel = event.id;
+    console.log(difficultyLevel);
+    closeModals();
+}
 
 function imageData() {
     return [{
@@ -84,7 +92,6 @@ function shuffle(array) {
 function generateCards() {
     closeModals();
     const gameCardData = randomize(); //gameCardData gets randomized array
-
     gameCardData.forEach((item) => //run through array and add elements, classes, id and images to each item in array
         {
             const card = document.createElement('div');
@@ -105,6 +112,17 @@ function generateCards() {
             //add event listener that waits for the event 'click' and then call function userFlippedCard()
             card.addEventListener('click', userFlippedCard);
         });
+
+    //check what level difficulty user has chosen and update triesLeft in scoreboard
+    let triesLeft = difficultyLevel;
+    if (difficultyLevel === "level-easy") {
+        triesLeft = 12;
+    } else if (difficultyLevel === "level-medium") {
+        triesLeft = 8;
+    } else {
+        triesLeft = 5;
+    }
+    parseInt(document.getElementById('triesLeft').innerText = triesLeft);
 }
 
 /**
@@ -113,7 +131,7 @@ function generateCards() {
  */
 function userFlippedCard() {
 
-   
+
     if (gamingBoardLocked) return;
     if (this === cardOne) return;
     this.classList.add('cardFlipped');
@@ -152,7 +170,7 @@ function checkCards() {
         }, 1400);
         resetBoard();
     } else {
-         parseInt(document.getElementById('triesLeft').innerText = --triesLeft);
+        parseInt(document.getElementById('triesLeft').innerText = --triesLeft);
         unflipCards();
 
         //Check if there are any remaining tries for player.
@@ -205,4 +223,15 @@ function newGame() {
         front[index].src = item.imgSrc;
         card[index].setAttribute('id', item.id);
     });
+
+    //check what level difficulty user has chosen and update triesLeft in scoreboard
+    let triesLeft = difficultyLevel;
+    if (difficultyLevel === "level-easy") {
+        triesLeft = 12;
+    } else if (difficultyLevel === "level-medium") {
+        triesLeft = 8;
+    } else {
+        triesLeft = 5;
+    }
+    parseInt(document.getElementById('triesLeft').innerText = triesLeft);
 }
