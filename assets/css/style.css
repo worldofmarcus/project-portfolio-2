@@ -8,6 +8,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(to bottom right, #500303, #0b0505);
 }
 
 html {
@@ -36,12 +37,14 @@ body {
 
 .container-max-width {
     max-width: 800px;
+
 }
 
 
 .logo-area {
     margin: 20px auto 20px auto;
     max-width: 800px;
+
 }
 
 .logo-queen {
@@ -53,25 +56,55 @@ body {
 
 .score-board-text {
     color: #0B0505;
-    background-color: #c1bfc6;
-    font-weight: 700;
-    padding: 20px;
+    background-image: linear-gradient( #f4f4f4, #AAA6B2);
+    font-size: 1.2rem;
+    padding: 10px;
     border-radius: 10px;
+    font-family: 'Kaushan Script', cursive;
 }
 
 .points,
 .tries,
 .rounds,
-.scoreboard-button{
+.scoreboard-button,
+.sound-button {
     padding: .7rem .7rem .7rem .7rem;
 }
+
+ /* Button animation taken from W3Schools (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1) */
+.button span{
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
 /* memory board area */
 
 .game-background {
     background: url("../images/game_background.png") center center/contain no-repeat;
     padding: 200px 0;
-}
+
+   }
 
 #memory-board {
     flex-wrap: wrap;
@@ -130,7 +163,8 @@ body {
 }
 
 .modal-content {
-    background-color: #c1bfc6;
+    font-size: 1.2rem;
+    background-image: linear-gradient( #f4f4f4, #AAA6B2);
     color: rgba(11, 5, 5);
     border: solid 2px #c1bfc6;
 }
@@ -140,14 +174,35 @@ body {
     border: 0;
 }
 
-.start-game-button {
-    font-size: 1.2rem;
-    background-color: #500303;
-    border: 1px solid black;
-    color: #c1bfc6;
-    border-radius: 5px;
-    border: 1px solid #c1bfc6;
+
+.modal-button span{
+
+
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
 }
+
+.modal-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .modal-button:hover span {
+    padding-right: 25px;
+  }
+  
+  .modal-button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
 
 /* ==============
    media queries

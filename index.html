@@ -24,19 +24,26 @@
 
 <!-- Scoreboard area -->
 <section class="container container-max-width">
-    <div class="d-flex justify-content-center">
-        <div class="d-flex float-left">
+    <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-center">
+        <div class="d-flex">
             <div class="points">
                 <div class="score-board-text">Points: <span id="numberOfPoints">0</span></div>
             </div>
             <div class="tries">
                 <div class="score-board-text">Tries left: <span id="triesLeft"></span></div>
             </div>
+        </div>
+            <div class="d-flex float-right">
             <div class="scoreboard-button">
-                <button class="score-board-text" onclick="$('#instructions-modal').modal('show')"
-                    id="button-instruction" aria-label="Reset Game">Instructions</button>
+                <button class="score-board-text button" onclick="$('#instructions-modal').modal('show')"
+                aria-label="Button Instruction"><span>Instructions </span></button>
+            </div>
+            <div class="sound-button">
+                <button class="score-board-text button" onclick=muteAudio()
+                aria-label="Button Sound"><span>Sound On/Off </span></button>
             </div>
         </div>
+        
     </div>
 </section>
 
@@ -80,12 +87,12 @@
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); generateCards()" id="level-easy">Easy</button>
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); generateCards()" id="level-medium">Medium</button>
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); generateCards()" id="level-hard">Hard</button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); generateCards()" id="level-easy"><span>Easy </span></button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); generateCards()" id="level-medium"><span>Medium </span></button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); generateCards()" id="level-hard"><span>Hard </span></button>
             </div>
         </div>
     </div>
@@ -121,14 +128,14 @@
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-easy">Easy</button>
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-medium">Medium</button>
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-hard">Hard</button>
-                    <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="closeModals()">Back to game</button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy </span></button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium </span></button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard </span></button>
+                    <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="closeModals()"><span>Back to game </span></button>
             </div>
         </div>
     </div>
@@ -151,12 +158,12 @@
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-easy">Easy</button>
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-medium">Medium</button>
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-hard">Hard</button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy </span></button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium </span></button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard </span></button>
             </div>
             </div>
         </div>
@@ -180,12 +187,12 @@
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-easy">Easy</button>
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-medium">Medium</button>
-                <button type="button" class="start-game-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-hard">Hard</button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy </span></button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium </span></button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard </span></button>
             </div>
             </div>
         </div>

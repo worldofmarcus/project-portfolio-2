@@ -1,4 +1,4 @@
-const section = document.querySelectorAll('div')[10];
+const section = document.querySelectorAll('div')[12];
 const levelHard = 5;
 const levelMedium = 8;
 const leveleasy = 12;
@@ -10,7 +10,6 @@ let difficultyLevel;
 
 function levelChoice(event) {
     difficultyLevel = event.id;
-    console.log(difficultyLevel);
     closeModals();
 }
 
@@ -130,8 +129,6 @@ function generateCards() {
  * clicked pairs in variables cardOne and cardTwo. Also includes check if one click already has been made.
  */
 function userFlippedCard() {
-
-
     if (gamingBoardLocked) return;
     if (this === cardOne) return;
     this.classList.add('cardFlipped');
