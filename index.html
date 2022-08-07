@@ -34,12 +34,12 @@
             </div>
         </div>
         <div class="d-flex float-right">
-            <div class="scoreboard-button">
-                <button class="score-board-text button" onclick="$('#instructions-modal').modal('show')"
+            <div class="scoreboard-button-area">
+                <button class="score-board-text score-board-button" onclick="$('#instructions-modal').modal('show')"
                     aria-label="Button Instruction"><span><i class="fa-solid fa-circle-info"></i></span></button>
             </div>
             <div class="sound-button">
-                <button class="score-board-text button" onclick=muteAudio() aria-label="Button Sound"><span><i
+                <button class="score-board-text score-board-button" onclick=muteAudio() aria-label="Button Sound"><span><i
                             id="audio-icon" class="fa-solid fa-volume-high"></i></span></button>
             </div>
         </div>
@@ -176,17 +176,17 @@
             </div>
             <div class="modal-body text-justify">
                 <p>
-                    Fantastic! You managed to collect all my items and the kindgom is saved! Thank you!
+                    Congratulations! You managed to find the diamond and all my keys! Thanks to you the kingdom is saved! You are truly a hero!
                 </p>
                 <p>
-                    Press the 'new game'-button if you want to try the journey again. Good luck!
+                    Choose difficulty below if you want to start a new game and best of luck on your quest!
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
                     onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy (12 tries) </span></button>
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium (medium 8 tries) </span></button>
+                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium (8 tries) </span></button>
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
                     onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard (5 tries) </span></button>
             </div>
