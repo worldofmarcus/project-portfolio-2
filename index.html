@@ -33,17 +33,16 @@
                 <div class="score-board-text">Tries left: <span id="triesLeft"></span></div>
             </div>
         </div>
-            <div class="d-flex float-right">
+        <div class="d-flex float-right">
             <div class="scoreboard-button">
                 <button class="score-board-text button" onclick="$('#instructions-modal').modal('show')"
-                aria-label="Button Instruction"><span>Instructions </span></button>
+                    aria-label="Button Instruction"><span><i class="fa-solid fa-circle-info"></i></span></button>
             </div>
             <div class="sound-button">
-                <button class="score-board-text button" onclick=muteAudio()
-                aria-label="Button Sound"><span>Sound On/Off </span></button>
+                <button class="score-board-text button" onclick=muteAudio() aria-label="Button Sound"><span><i
+                            id="audio-icon" class="fa-solid fa-volume-high"></i></span></button>
             </div>
         </div>
-        
     </div>
 </section>
 
@@ -64,35 +63,34 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
-                <h5 class="modal-title" id="modal-welcome-title">Memory of Queen Oblivion</h5>
+                <h5 class="modal-title">Memory of Queen Oblivion</h5>
             </div>
             <div class="modal-body text-justify">
-                <p>
+                <p id="modal-welcome-code-institute">
                     Welcome to 'Memory of Queen Oblivion', a game created for Portfolio Project #2 (JavaScript) -
-                    Diploma in
-                    Full Stack Software Development Diploma at the <a href="https://codeinstitute.net/se/"
+                    Diploma in Full Stack Software Development Diploma at the <a href="https://codeinstitute.net/se/"
                         target="_blank">Code Institute.</a>
                 </p>
                 <p>
-                    Anyhow. I need your help! And I need your help fast! I'm sad to say that the evil queen of Oblivion
-                    has taken my precious
-                    diamond and all my keys that goes to the castles of my kingdom. She has cast a spell that has
-                    trapped the diamond and keys
-                    in pairs inside a set of cards (don't ask me why).
+                    Now I need your help! And I need it fast! The evil queen of Oblivion has stolen my precious diamond
+                    and all my keys that goes to the castles of my kingdom. She has cast a spell and the diamond and
+                    keys are now trapped inside a set of cards.
+                    The only way you can help me is to find all of the matching cards!
                 </p>
                 <p>
-                    The only way you can help me is to find all of the matching cards. When you have matched all cards
-                    you have saved me!
-                    Choose difficulty below to start the game. Good lock on your journey!
+                    If you want to read this text during the game, just click the i-icon in the gaming menu, next to
+                    that icon you can also toggle sound on/off. Choose difficulty below to start the game and best of
+                    luck on your quest!
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); generateCards()" id="level-easy"><span>Easy </span></button>
+                    onclick="levelChoice(this); generateCards()" id="level-easy"><span>Easy (12 tries) </span></button>
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); generateCards()" id="level-medium"><span>Medium </span></button>
+                    onclick="levelChoice(this); generateCards()" id="level-medium"><span>Medium (8 tries)
+                    </span></button>
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); generateCards()" id="level-hard"><span>Hard </span></button>
+                    onclick="levelChoice(this); generateCards()" id="level-hard"><span>Hard (5 tries) </span></button>
             </div>
         </div>
     </div>
@@ -105,36 +103,34 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
-                <h5 class="modal-title" id="modal-welcome-title">TEST of Queen Oblivion</h5>
+                <h5 class="modal-title">Memory of Queen Oblivion</h5>
             </div>
             <div class="modal-body text-justify">
-                <p>
+                <p id="modal-welcome-code-institute">
                     Welcome to 'Memory of Queen Oblivion', a game created for Portfolio Project #2 (JavaScript) -
-                    Diploma in
-                    Full Stack Software Development Diploma at the <a href="https://codeinstitute.net/se/"
+                    Diploma in Full Stack Software Development Diploma at the <a href="https://codeinstitute.net/se/"
                         target="_blank">Code Institute.</a>
                 </p>
                 <p>
-                    Anyhow. I need your help! And I need your help fast! I'm sad to say that the evil queen of Oblivion
-                    has taken my precious
-                    diamond and all my keys that goes to the castles of my kingdom. She has cast a spell that has
-                    trapped the diamond and keys
-                    in pairs inside a set of cards (don't ask me why).
+                    Now I need your help! And I need it fast! The evil queen of Oblivion has stolen my precious diamond
+                    and all my keys that goes to the castles of my kingdom. She has cast a spell and the diamond and
+                    keys are now trapped inside a set of cards.
+                    The only way you can help me is to find all of the matching cards!
                 </p>
                 <p>
-                    The only way you can help me is to find all of the matching cards. When you have matched all cards
-                    you have saved me!
-                    Press the 'start game'-button to begin your journey. Good luck!
+                    If you want to read this text during the game, just click the i-icon in the gaming menu, next to
+                    that icon you can also toggle sound on/off. Choose difficulty below to start the game and best of
+                    luck on your quest!
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy </span></button>
+                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy (12 tries) </span></button>
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium </span></button>
+                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium (8 tries) </span></button>
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard </span></button>
-                    <button type="button" class="modal-button score-board-text" data-dismiss="modal"
+                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard (5 tries)</span></button>
+                <button type="button" class="modal-button score-board-text" data-dismiss="modal"
                     onclick="closeModals()"><span>Back to game </span></button>
             </div>
         </div>
@@ -147,27 +143,27 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
-                <h5 class="modal-title" id="modal-game-over-title">Memory of Queen Oblivion</h5>
+                <h5 class="modal-title">Memory of Queen Oblivion</h5>
             </div>
             <div class="modal-body text-justify">
                 <p>
-                    Oh No! You didn't succeed to find my loved belongings! But don't be sad! You can always try again!
+                    Oh no! You didn't manage to find my diamond and keys! But don't worry! You can always try again!
                 </p>
                 <p>
-                    Press the 'new game'-button to begin your journey again. Good luck!
+                    Choose difficulty below to start a new game and best of luck on your quest!
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy </span></button>
+                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy (12 tries) </span></button>
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium </span></button>
+                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium (8 tries) </span></button>
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard </span></button>
-            </div>
+                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard (5 tries) </span></button>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- Congratulations Modal (this modal is being called when the user has matched all cards) -->
@@ -176,7 +172,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
-                <h5 class="modal-title" id="modal-congratulations-title">Memory of Queen Oblivion</h5>
+                <h5 class="modal-title">Memory of Queen Oblivion</h5>
             </div>
             <div class="modal-body text-justify">
                 <p>
@@ -188,15 +184,15 @@
             </div>
             <div class="modal-footer justify-content-center">
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy </span></button>
+                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy (12 tries) </span></button>
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium </span></button>
+                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium (medium 8 tries) </span></button>
                 <button type="button" class="modal-button score-board-text" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard </span></button>
-            </div>
+                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard (5 tries) </span></button>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- Links to the external scripts being used in this project -->
@@ -208,6 +204,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
     integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
 </script>
+<!-- Font awesome script -->
+<script src="https://kit.fontawesome.com/8d439f32ad.js" crossorigin="anonymous"></script>
 <script src="assets/js/script.js"></script>
 <script src="assets/js/modals.js"></script>
 <script src="assets/js/audio.js"></script>

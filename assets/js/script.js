@@ -71,7 +71,6 @@ function imageData() {
 function randomize() {
     const gameCardData = imageData();
     shuffle(gameCardData);
-    console.log(gameCardData);
     return (gameCardData);
 }
 

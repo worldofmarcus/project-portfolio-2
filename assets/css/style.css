@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Kaushan+Script&display=swap');
 
 /* ==============
    global styles
@@ -17,7 +17,7 @@ html {
 
 body {
     background-color: #0B0505;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Amatic SC', cursive;
     color: #c1bfc6;
     min-height: 100%;
     position: relative;
@@ -56,7 +56,7 @@ body {
 
 .score-board-text {
     color: #0B0505;
-    background-image: linear-gradient( #f4f4f4, #AAA6B2);
+    background-image: linear-gradient(#f4f4f4, #AAA6B2);
     font-size: 1.2rem;
     padding: 10px;
     border-radius: 10px;
@@ -71,8 +71,8 @@ body {
     padding: .7rem .7rem .7rem .7rem;
 }
 
- /* Button animation taken from W3Schools (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1) */
-.button span{
+/* Button animation taken from W3Schools (https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate1) */
+.button span {
     border: none;
     cursor: pointer;
     display: inline-block;
@@ -80,23 +80,23 @@ body {
     transition: 0.5s;
 }
 
-  .button span:after {
+.button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
-  }
-  
-  .button:hover span {
+}
+
+.button:hover span {
     padding-right: 25px;
-  }
-  
-  .button:hover span:after {
+}
+
+.button:hover span:after {
     opacity: 1;
     right: 0;
-  }
+}
 
 /* memory board area */
 
@@ -104,7 +104,7 @@ body {
     background: url("../images/game_background.png") center center/contain no-repeat;
     padding: 200px 0;
 
-   }
+}
 
 #memory-board {
     flex-wrap: wrap;
@@ -157,14 +157,17 @@ body {
 
 /* modals section */
 
-#modal-welcome-title {
-    font-size: 2rem;
-    text-transform: uppercase;
+#modal-welcome-code-institute {
+    font-size: 1.2rem;
+}
+
+.modal-title {
+    font-size: 3rem;
 }
 
 .modal-content {
-    font-size: 1.2rem;
-    background-image: linear-gradient( #f4f4f4, #AAA6B2);
+    font-size: 1.8rem;
+    background-image: linear-gradient(#f4f4f4, #AAA6B2);
     color: rgba(11, 5, 5);
     border: solid 2px #c1bfc6;
 }
@@ -175,9 +178,7 @@ body {
 }
 
 
-.modal-button span{
-
-
+.modal-button span {
     border: none;
     cursor: pointer;
     display: inline-block;
@@ -192,16 +193,16 @@ body {
     top: 0;
     right: -20px;
     transition: 0.5s;
-  }
-  
-  .modal-button:hover span {
+}
+
+.modal-button:hover span {
     padding-right: 25px;
-  }
-  
-  .modal-button:hover span:after {
+}
+
+.modal-button:hover span:after {
     opacity: 1;
     right: 0;
-  }
+}
 
 
 /* ==============
