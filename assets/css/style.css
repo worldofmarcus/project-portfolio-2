@@ -41,7 +41,7 @@ body {
 
 .logo-queen {
     height: 25vh;
-    background: url("../images/logo.png") center center/contain no-repeat;
+    background: url("../images/logo.webp") center center/contain no-repeat;
 }
 
 /* Scoreboard area */
@@ -75,7 +75,7 @@ body {
 
 /* Game area */
 .game-background {
-    background: url("../images/game_background.png") center center/contain no-repeat;
+    background: url("../images/game_background.webp") center center/contain no-repeat;
     padding: 200px 0;
 }
  

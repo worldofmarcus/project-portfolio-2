@@ -10,51 +10,51 @@ let difficultyLevel;
  */
 function imageData() {
     return [{
-            imgSrc: "assets/images/card_key_1.png",
+            imgSrc: "assets/images/card_key_1.webp",
             id: "card_key_1"
         },
         {
-            imgSrc: "assets/images/card_key_2.png",
+            imgSrc: "assets/images/card_key_2.webp",
             id: "card_key_2"
         },
         {
-            imgSrc: "assets/images/card_key_3.png",
+            imgSrc: "assets/images/card_key_3.webp",
             id: "card_key_3"
         },
         {
-            imgSrc: "assets/images/card_key_4.png",
+            imgSrc: "assets/images/card_key_4.webp",
             id: "card_key_4"
         },
         {
-            imgSrc: "assets/images/card_key_5.png",
+            imgSrc: "assets/images/card_key_5.webp",
             id: "card_key_5"
         },
         {
-            imgSrc: "assets/images/card_diamond.png",
+            imgSrc: "assets/images/card_diamond.webp",
             id: "card_diamond"
         },
         {
-            imgSrc: "assets/images/card_key_1.png",
+            imgSrc: "assets/images/card_key_1.webp",
             id: "card_key_1"
         },
         {
-            imgSrc: "assets/images/card_key_2.png",
+            imgSrc: "assets/images/card_key_2.webp",
             id: "card_key_2"
         },
         {
-            imgSrc: "assets/images/card_key_3.png",
+            imgSrc: "assets/images/card_key_3.webp",
             id: "card_key_3"
         },
         {
-            imgSrc: "assets/images/card_key_4.png",
+            imgSrc: "assets/images/card_key_4.webp",
             id: "card_key_4"
         },
         {
-            imgSrc: "assets/images/card_key_5.png",
+            imgSrc: "assets/images/card_key_5.webp",
             id: "card_key_5"
         },
         {
-            imgSrc: "assets/images/card_diamond.png",
+            imgSrc: "assets/images/card_diamond.webp",
             id: "card_diamond"
         },
     ];
@@ -103,7 +103,7 @@ function generateCards() {
         front.classList = 'front';
         back.classList = 'back';
         front.src = item.imgSrc;
-        back.src = "assets/images/card_back.png";
+        back.src = "assets/images/card_back.webp";
         card.setAttribute('id', item.id);
         section.appendChild(card);
         card.appendChild(front);
