@@ -1,4 +1,4 @@
-//define audio variables
+// Initiate global audio variables
 
 let audio = {
     mute: false,
@@ -11,10 +11,9 @@ let audio = {
 
 
 /**
- * Function plays sound when user flips card
+ * Function plays sound when user flips card unless audio.mute is true
  * */
 function flipCardAudio() {
-
     if (audio.mute === true) {
         return;
     } else {
@@ -23,14 +22,18 @@ function flipCardAudio() {
 }
 
 /**
- * Function plays sound when user matches cards
+ * Function plays sound when user matches cards unless audio.mute is true
  * */
 function matchAudio() {
-    audio.cardMatch.play();
+    if (audio.mute === true) {
+        return;
+    } else {
+        audio.cardMatch.play();
+    }
 }
 
 /**
- * Function plays sound when user fail to match cards
+ * Function plays sound when user fail to match cards unless audio.mute is true
  * */
 function noMatchAudio() {
 
@@ -39,12 +42,10 @@ function noMatchAudio() {
     } else {
         audio.cardNoMatch.play();
     }
-
-
 }
 
 /**
- * Function plays sound when user has no tries left (game over)
+ * Function plays sound when user has no tries left (game over) unless audio.mute is true
  * */
 function gameOverAudio() {
     if (audio.mute === true) {
@@ -52,12 +53,10 @@ function gameOverAudio() {
     } else {
         audio.gameOver.play();
     }
-
-
 }
 
 /**
- * Function plays sound when user has found all matching cards
+ * Function plays sound when user has found all matching cards unless audio.mute is true
  * */
 function gameCompleteAudio() {
     if (audio.mute === true) {
@@ -67,9 +66,13 @@ function gameCompleteAudio() {
     }
 }
 
+/**
+ * Function toggles sound on/off when user clicks volume icon in scoreboard area.
+ * Function also changes the alsss of the audio icon so that the Font Awesome changes
+ * */
 function muteAudio() {
     let audioIcon = document.getElementById('audio-icon');
-    if (audio.mute === false) {      
+    if (audio.mute === false) {
         audioIcon.classList = ('fa-solid fa-volume-xmark');
         audio.mute = true;
         audio.cardFlip.muted = true;
