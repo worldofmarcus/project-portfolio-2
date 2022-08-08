@@ -23,23 +23,15 @@ body {
     position: relative;
 }
 
-
 /* ==============
-   typography
+   Layout
    ============== */
 
-
-/* ==============
-   layout
-   ============== */
-
-/* logo area */
-
+/* Logo area */
 .container-max-width {
     max-width: 800px;
 
 }
-
 
 .logo-area {
     margin: 20px auto 20px auto;
@@ -52,8 +44,7 @@ body {
     background: url("../images/logo.png") center center/contain no-repeat;
 }
 
-/* scoreboard area */
-
+/* Scoreboard area */
 .score-board-text {
     color: #0B0505;
     background-image: linear-gradient(#f4f4f4, #AAA6B2);
@@ -80,19 +71,14 @@ body {
 .score-board-button:hover {
     transform: scale(1.2);
     transition: .5s;
-
 }
 
-/* memory board area */
-
+/* Game area */
 .game-background {
     background: url("../images/game_background.png") center center/contain no-repeat;
     padding: 200px 0;
 }
  
-
-
-
 #memory-board {
     flex-wrap: wrap;
     display: flex;
@@ -103,7 +89,6 @@ body {
     min-height: 320px;
 }
 
-/* memory card design */
 .card {
     width: 115px;
     height: 155px;
@@ -116,6 +101,10 @@ body {
     transition: transform .5s;
 }
 
+.card:active {
+    transform: scale(0.95);
+    transition: .1s;
+}
 
 .front,
 .back {
@@ -126,11 +115,11 @@ body {
     backface-visibility: hidden;
 }
 
-.card.cardFlipped {
+.front {
     transform: rotateX(180deg);
 }
 
-.front {
+.card.cardFlipped {
     transform: rotateX(180deg);
 }
 
@@ -138,23 +127,12 @@ body {
     pointer-events: none;
 }
 
-.card:active {
-    transform: scale(0.95);
-    transition: .1s;
-}
-
-/* modals section */
-
-#modal-welcome-code-institute {
-    font-size: 1.2rem;
-}
-
+/* Modals section */
 .modal-title {
     font-size: 3rem;
 }
 
 .modal-content {
-
     font-size: 1.8rem;
     background-image: linear-gradient(#f4f4f4, #AAA6B2);
     color: rgba(11, 5, 5);
@@ -166,6 +144,11 @@ body {
     border: 0;
 }
 
+#modal-welcome-code-institute,
+#modal-instructions-code-institute {
+    font-size: 1.2rem;
+}
+
 .modal-button {
     cursor: pointer;
     border: none;
@@ -174,7 +157,6 @@ body {
     background-image: linear-gradient(#f4f4f4, #AAA6B2);
     font-size: 1.6rem;
     border-radius: 10px;
-
 }
 
 .modal-button:hover {
@@ -191,8 +173,6 @@ body {
     .game-background {
         padding-top: 100px;
     }
-
-
 }
 
 @media (max-width: 410px) {

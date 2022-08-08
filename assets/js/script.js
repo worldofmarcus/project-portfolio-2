@@ -1,18 +1,13 @@
-const section = document.querySelectorAll('div')[12];
-const levelHard = 5;
-const levelMedium = 8;
-const leveleasy = 12;
+// Initiate global variables
+const section = document.querySelectorAll('div')[14];
 let cardFlipped = false;
 let gamingBoardLocked = false;
 let cardOne, cardTwo;
 let difficultyLevel;
-// Function records users difficulty choice
 
-function levelChoice(event) {
-    difficultyLevel = event.id;
-    closeModals();
-}
-
+/**
+ * Function creates array with images and id.
+ */
 function imageData() {
     return [{
             imgSrc: "assets/images/card_key_1.png",
@@ -66,7 +61,7 @@ function imageData() {
 }
 
 /**
- * Function to randomize array of cards. Array is being returned to generateCards function.
+ * Function to randomize array of cards (with help of shuffle array). Array is being returned to generateCards function.
  */
 function randomize() {
     const gameCardData = imageData();
@@ -85,47 +80,52 @@ function shuffle(array) {
 }
 
 /**
+ * Function records users choice of difficulty and close modal
+ */
+function levelChoice(event) {
+    difficultyLevel = event.id;
+    closeModals();
+}
+
+/**
  *  Generate cards to be able to append them to HTML document structure.
  */
 function generateCards() {
     closeModals();
-    const gameCardData = randomize(); //gameCardData gets randomized array
-    gameCardData.forEach((item) => //run through array and add elements, classes, id and images to each item in array
-        {
-            const card = document.createElement('div');
-            const front = document.createElement('img');
-            const back = document.createElement('img');
-            card.classList = 'card';
-            front.classList = 'front';
-            back.classList = 'back';
-            //Add image on each front and back card in array
-            front.src = item.imgSrc;
-            back.src = "assets/images/card_back.png";
-            //Add id to each card in array
-            card.setAttribute('id', item.id);
-            //Attach cards to section
-            section.appendChild(card);
-            card.appendChild(front);
-            card.appendChild(back);
-            //add event listener that waits for the event 'click' and then call function userFlippedCard()
-            card.addEventListener('click', userFlippedCard);
-        });
-
-    //check what level difficulty user has chosen and update triesLeft in scoreboard
+    //gameCardData gets randomized array
+    const gameCardData = randomize();
+    //Run through array and add elements, classes, id and images to each item in array. Also includes event listener that waits for the event 'click' and then call function userFLippedCard()
+    gameCardData.forEach((item) => {
+        const card = document.createElement('div');
+        const front = document.createElement('img');
+        const back = document.createElement('img');
+        card.classList = 'card';
+        front.classList = 'front';
+        back.classList = 'back';
+        front.src = item.imgSrc;
+        back.src = "assets/images/card_back.png";
+        card.setAttribute('id', item.id);
+        section.appendChild(card);
+        card.appendChild(front);
+        card.appendChild(back);
+        card.addEventListener('click', userFlippedCard);
+    });
+    //Check the level difficulty user has chosen and update triesLeft in scoreboard
     let triesLeft = difficultyLevel;
-    if (difficultyLevel === "level-easy") {
+    if (difficultyLevel === "level-easy" || difficultyLevel === "level-easy-instructions" || difficultyLevel === "level-easy-game-over" || difficultyLevel === "level-easy-congratulations") {
         triesLeft = 12;
-    } else if (difficultyLevel === "level-medium") {
+    } else if (difficultyLevel === "level-medium" || difficultyLevel === "level-medium-instructions" || difficultyLevel === "level-medium-game-over" || difficultyLevel === "level-medium-congratulations") {
         triesLeft = 8;
     } else {
         triesLeft = 5;
     }
-    parseInt(document.getElementById('triesLeft').innerText = triesLeft);
+    parseInt(document.getElementById('tries-left').innerText = triesLeft);
 }
 
 /**
  * Function checks if card has been clicked and adds class of cardFlipped to it. Function also saves the
  * clicked pairs in variables cardOne and cardTwo. Also includes check if one click already has been made.
+ * Calls function checkCards when checks have been made
  */
 function userFlippedCard() {
     if (gamingBoardLocked) return;
@@ -145,17 +145,16 @@ function userFlippedCard() {
 }
 
 /**
- * Function checks if cardOne and cardTwo matches eachother and also keeps track of users score.
+ * Function checks if cardOne and cardTwo matches eachother and also keeps track of users score
  */
 function checkCards() {
-    let triesLeft = document.getElementById('triesLeft').innerText;
-    let numberOfPoints = document.getElementById('numberOfPoints').innerText;
+    let triesLeft = document.getElementById('tries-left').innerText;
+    let numberOfPoints = document.getElementById('number-of-points').innerText;
     if (cardOne.id === cardTwo.id) {
         cardOne.classList.add('not-clickable');
         cardTwo.classList.add('not-clickable');
-        parseInt(document.getElementById('numberOfPoints').innerText = ++numberOfPoints);
+        parseInt(document.getElementById('number-of-points').innerText = ++numberOfPoints);
         matchAudio();
-
         //Check if player has found all pair of cards.
         const checkWin = document.querySelectorAll('.cardFlipped');
         setTimeout(() => {
@@ -166,9 +165,8 @@ function checkCards() {
         }, 1400);
         resetBoard();
     } else {
-        parseInt(document.getElementById('triesLeft').innerText = --triesLeft);
+        parseInt(document.getElementById('tries-left').innerText = --triesLeft);
         unflipCards();
-
         //Check if there are any remaining tries for player.
         setTimeout(() => {
             if (triesLeft === 0) {
@@ -211,23 +209,21 @@ function newGame() {
     let gameCardData = randomize();
     let front = document.querySelectorAll(".front");
     let card = document.querySelectorAll('.card');
-    parseInt(document.getElementById('triesLeft').innerText = 5);
-    parseInt(document.getElementById('numberOfPoints').innerText = 0);
+    parseInt(document.getElementById('number-of-points').innerText = 0);
     gameCardData.forEach((item, index) => {
         card[index].classList.remove('cardFlipped');
         card[index].classList.remove('not-clickable');
         front[index].src = item.imgSrc;
         card[index].setAttribute('id', item.id);
     });
-
-    //check what level difficulty user has chosen and update triesLeft in scoreboard
+    //Check the level difficulty user has chosen and update triesLeft in scoreboard
     let triesLeft = difficultyLevel;
-    if (difficultyLevel === "level-easy") {
+    if (difficultyLevel === "level-easy-instructions" || difficultyLevel === "level-easy-game-over" || difficultyLevel === "level-easy-congratulations") {
         triesLeft = 12;
-    } else if (difficultyLevel === "level-medium") {
+    } else if (difficultyLevel === "level-medium-instructions" || difficultyLevel === "level-medium-game-over" || difficultyLevel === "level-medium-congratulations") {
         triesLeft = 8;
     } else {
         triesLeft = 5;
     }
-    parseInt(document.getElementById('triesLeft').innerText = triesLeft);
+    parseInt(document.getElementById('tries-left').innerText = triesLeft);
 }

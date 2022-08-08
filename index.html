@@ -7,6 +7,7 @@
     <meta name="description" content="Queen of Oblivion, a really exciting memory game">
     <meta name="keywords" content="queen of oblivion, memory, memory game, card matching game">
     <meta name="author" content="Marcus Eriksson">
+    <!-- Links to Bootstrap and Favicon -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
@@ -15,49 +16,52 @@
 </head>
 
 <!-- Logo area -->
-<section class="container container-max-width">
+<header class="container container-max-width">
     <div class="logo-area">
         <div class="logo-queen">
         </div>
     </div>
-</section>
+</header>
 
 <!-- Scoreboard area -->
-<section class="container container-max-width">
+<div class="container container-max-width">
     <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-center">
+        <!-- Scoreboard points and tries -->
         <div class="d-flex">
             <div class="points">
-                <div class="score-board-text">Points: <span id="numberOfPoints">0</span></div>
+                <div class="score-board-text">Points: <span id="number-of-points">0</span></div>
             </div>
             <div class="tries">
-                <div class="score-board-text">Tries left: <span id="triesLeft"></span></div>
+                <div class="score-board-text">Tries left: <span id="tries-left"></span></div>
             </div>
         </div>
+        <!-- Scoreboard information and sound toggle button -->
         <div class="d-flex float-right">
             <div class="scoreboard-button-area">
                 <button class="score-board-text score-board-button" onclick="$('#instructions-modal').modal('show')"
-                    aria-label="Button Instruction"><span><i class="fa-solid fa-circle-info"></i></span></button>
+                    aria-label="Button that opens welcome window"><span><i
+                            class="fa-solid fa-circle-info"></i></span></button>
             </div>
             <div class="sound-button">
-                <button class="score-board-text score-board-button" onclick=muteAudio() aria-label="Button Sound"><span><i
-                            id="audio-icon" class="fa-solid fa-volume-high"></i></span></button>
+                <button class="score-board-text score-board-button" onclick=muteAudio()
+                    aria-label="Button that toggle sound on and off"><span><i id="audio-icon"
+                            class="fa-solid fa-volume-high"></i></span></button>
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<!-- Memory Board is populated from array in script.js -->
-<section class="container container-max-width game-background">
+<!-- Game area - Memory board is populated from array in script.js -->
+<div class="container container-max-width game-background">
     <div class="game-area">
         <div id="memory-board">
         </div>
     </div>
-</section>
+</div>
 
-<!-- Modals -->
+<!-- Modals area-->
 
 <!-- Welcome Modal (this modal is being launched when the page loads) -->
-
 <div class="modal fade" id="welcome-modal" tabindex="-1" role="dialog" aria-labelledby="welcome-modal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -97,7 +101,6 @@
 </div>
 
 <!-- Instructions Modal (this modal is being launched when the user clicks on the instruction button in the scoreboard area) -->
-
 <div class="modal fade" id="instructions-modal" tabindex="-1" role="dialog" aria-labelledby="instructions-modal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -106,7 +109,7 @@
                 <h5 class="modal-title">Memory of Queen Oblivion</h5>
             </div>
             <div class="modal-body text-justify">
-                <p id="modal-welcome-code-institute">
+                <p id="modal-instructions-code-institute">
                     Welcome to 'Memory of Queen Oblivion', a game created for Portfolio Project #2 (JavaScript) -
                     Diploma in Full Stack Software Development Diploma at the <a href="https://codeinstitute.net/se/"
                         target="_blank">Code Institute.</a>
@@ -124,14 +127,14 @@
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy (12 tries) </span></button>
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium (8 tries) </span></button>
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard (5 tries)</span></button>
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="closeModals()"><span>Back to game </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-easy-instructions"><span>Easy (12 tries) </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-medium-instructions"><span>Medium (8 tries) </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-hard-instructions"><span>Hard (5 tries)</span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="closeModals()"><span>Back to
+                        game </span></button>
             </div>
         </div>
     </div>
@@ -154,16 +157,15 @@
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy (12 tries) </span></button>
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium (8 tries) </span></button>
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard (5 tries) </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-easy-game-over"><span>Easy (12 tries) </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-medium-game-over"><span>Medium (8 tries) </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-hard-game-over"><span>Hard (5 tries) </span></button>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <!-- Congratulations Modal (this modal is being called when the user has matched all cards) -->
@@ -176,23 +178,23 @@
             </div>
             <div class="modal-body text-justify">
                 <p>
-                    Congratulations! You managed to find the diamond and all of my keys! Thanks to you the kingdom is saved! You are truly a hero!
+                    Congratulations! You managed to find the diamond and all of my keys! Thanks to you the kingdom is
+                    saved! You are truly a hero!
                 </p>
                 <p>
                     Choose difficulty below if you want to start a new game and best of luck on your quest!
                 </p>
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-easy"><span>Easy (12 tries) </span></button>
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-medium"><span>Medium (8 tries) </span></button>
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); newGame()" id="level-hard"><span>Hard (5 tries) </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-easy-congratulations"><span>Easy (12 tries) </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-medium-congratulations"><span>Medium (8 tries) </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-hard-congratulations"><span>Hard (5 tries) </span></button>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <!-- Links to the external scripts being used in this project -->
