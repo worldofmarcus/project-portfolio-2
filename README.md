@@ -87,44 +87,59 @@ To be updated
 # **Features**
 The features in the game are very straight forward. For me it was important with a intuitive interface that works the way the user expects it to. Some examples of features in the game are *choose difficulty level*, *toggle sound on/off*, *sound effects and animations to make it clear when user has clicked on the memory cards* and *possibility to always open start window from scoreboard menu*.
 
-An intuitive interface is one that works the way the user expects it to. In other words, we find something intuitive when we don't have to think about it. Thinking, as anyone studying for an exam can tell you, is hard. It takes energy and attention. And thinking about two things at once is particularly difficult.3 feb. 2017
-The features on the Creative Dreams website will help the users to understand what Creative Dreams offer and in an easy way initiate contact. General examples of features are *navigation bar*, *contact form*, *about section*, *our services section* and *examples of clients*.
-
 ## **Existing Features**
 
-* ### Navigation Bar
+* ### Logo Area
 
-  * The navigation section will help the user to, in an easy way, navigate on the page.
+ ![Logo Area](readme/assets/images/logo_area.png)
 
-  * All sections on the site are gathered on the landing page (*index.html*) and the navigation bar, that is fully responsive, includes anchor links (with smooth scrolling) to *home*, *about*, *our services*, *portfolio* and *contact*.
-
-  * The navigation is fixed / sticky and the menu items will stay highlighted after being clicked to make sure the user knows where they are on the site.
- 
- ![Navigation Bar](readme/assets/images/navigation.png)
+  * The logo area introduces the name of the game to the user.
 
 [Back to top](<#table-of-content>)
-* ### Hero Section
 
-  * The landing page includes a photograph with an overlay text box including an inspirational quote by Elizabeth Gilbert (*"A creative life is an amplified life, it's a bigger life, a happier life, an expanded life, and a hell of a lot more interesting life"*).
+* ### Scoreboard Area
 
-  * This section will get the users attention and inspire to learn more about Creative Dreams.
+ ![Scoreboard Area](readme/assets/images/scoreboard_area.png)
 
- ![Hero Section](readme/assets/images/hero.png)
+  * The scoreboard area includes a points counter that adds +1 for every try to match card the user does. It also includes a tries left counter that subtracts -1 for every failed matching of cards. The initial value of the tries left counter is connected to the users choice of difficulty in the modal windows (see [modals](<#modals>) below). The different difficultys are: *easy: 12 tries*, *medium: 8 tries*, *hard: 5 tries*.
+  
+  * The scoreboard area also includes two clickable buttons, one *information button* and one *sound toggle on/off button*
 
-[Back to top](<#table-of-content>)
-* ### About Us Section
-
-  * The about section is an important part of a webpage and has descriptive information about a company. It will introduce the user to who Creative Dreams are, a high-end studio with one clear mission, *to deliver top quality recordings, mixing and mastering solutions* to the customers.
-
- ![About](readme/assets/images/about_us.png)
+  * This scoreboard area will help the user to get updated about the game round and also get the possibility to re-visit the start screen through the information button and also turn on/off the sound in the game.
 
 [Back to top](<#table-of-content>)
-* ### Our Services Section
 
-  * The Our Services Section will introduce the user to what services Creative Dreams offers (*recording*, *mixing*, *mastering* and *brainstorming*).
+* ### Game Area
 
-  * This section will make the user interested in Creative Dreams products and trigger them to learn more and initiate contact.
+ ![Game Area](readme/assets/images/game_area.png)
 
-![Our Services](readme/assets/images/our_services.png)
+  * The game area is the area the user have the most interaction with. It consists of 12 memory cards that are clickable. The user needs to click two cards after each other to see if they match. When the user clicks a card a flip animation is triggered. If the cards match they stay flipped but if the don't match they flip back. If the user has no tries left the *game over modal* will open and if the user finds all matching cards the *congratulations modal will open*.
+
+  * There are also sound effects playing when the user *clicks the card*, *no match*, *match*, *game over* and *congratulations*.
 
 [Back to top](<#table-of-content>)
+
+* ### Modals
+
+  * The modals (*welcome and information modal*, *game over modal*, *congratulations modal*) in this game are important. It is in the modals the user gets information about the game and also have the possibility to choose difficulty level.
+
+    * The welcome and information modal pops when the game starts. It includes all the information the user needs to play the game (*backstory of the game*, *explanation of rules*, and *choice of difficulty*)
+    
+    ![Modal Welcome](readme/assets/images/modal_welcome.png)
+
+    * The information modal that pops when the user clicks the *i* icon in the scoreboard menu is the same as the welcome modal besides one added *back to game* button if the user doesn't want to restart the game.
+
+    ![Modal Welcome](readme/assets/images/modal_information.png)
+    
+    * Game Over Modal
+    
+    ![Modal Game Over](readme/assets/images/modal_game_over.png)
+    
+    * Congratulations Modal
+    
+    ![Modal Congratulations](readme/assets/images/modal_congratulations.png)
+
+[Back to top](<#table-of-content>)
+
+
+    
