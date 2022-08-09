@@ -11,51 +11,63 @@ let difficultyLevel;
 function imageData() {
     return [{
             imgSrc: "assets/images/card_key_1.webp",
-            id: "card_key_1"
+            id: "card_key_1",
+            alt: "card_key_1"
         },
         {
             imgSrc: "assets/images/card_key_2.webp",
-            id: "card_key_2"
+            id: "card_key_2",
+            alt: "card_key_2"
         },
         {
             imgSrc: "assets/images/card_key_3.webp",
-            id: "card_key_3"
+            id: "card_key_3",
+            alt: "card_key_3"
         },
         {
             imgSrc: "assets/images/card_key_4.webp",
-            id: "card_key_4"
+            id: "card_key_4",
+            alt: "card_key_4"
         },
         {
             imgSrc: "assets/images/card_key_5.webp",
-            id: "card_key_5"
+            id: "card_key_5",
+            alt: "card_key_5"
         },
         {
             imgSrc: "assets/images/card_diamond.webp",
-            id: "card_diamond"
+            id: "card_diamond",
+            alt: "card_diamond"
         },
         {
             imgSrc: "assets/images/card_key_1.webp",
-            id: "card_key_1"
+            id: "card_key_1",
+            alt: "card_key_1"
         },
         {
             imgSrc: "assets/images/card_key_2.webp",
-            id: "card_key_2"
+            id: "card_key_2",
+            alt: "card_key_2"
         },
         {
             imgSrc: "assets/images/card_key_3.webp",
-            id: "card_key_3"
+            id: "card_key_3",
+            alt: "card_key_3"
         },
         {
             imgSrc: "assets/images/card_key_4.webp",
-            id: "card_key_4"
+            id: "card_key_4",
+            alt: "card_key_4"
         },
         {
             imgSrc: "assets/images/card_key_5.webp",
-            id: "card_key_5"
+            id: "card_key_5",
+            alt: "card_key_5"
         },
         {
             imgSrc: "assets/images/card_diamond.webp",
-            id: "card_diamond"
+            id: "card_diamond",
+            alt: "card_diamond"
         },
     ];
 }
@@ -105,6 +117,7 @@ function generateCards() {
         front.src = item.imgSrc;
         back.src = "assets/images/card_back.webp";
         card.setAttribute('id', item.id);
+        card.setAttribute('alt', item.alt);
         section.appendChild(card);
         card.appendChild(front);
         card.appendChild(back);
@@ -205,6 +218,7 @@ function newGame() {
         card[index].classList.remove('not-clickable');
         front[index].src = item.imgSrc;
         card[index].setAttribute('id', item.id);
+        card[index].setAttribute('alt', item.alt);
     });
     //Check the level difficulty user has chosen and update triesLeft in scoreboard
     let triesLeft = difficultyLevel;

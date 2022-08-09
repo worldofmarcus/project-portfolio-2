@@ -123,21 +123,17 @@ The features in the game are very straight forward. For me it was important with
 
 * ### Modals
 
-  * The modals (*welcome and information modal*, *game over modal*, *congratulations modal*) in this game are important. It is in the modals the user gets information about the game and also have the possibility to choose difficulty level.
+  * The modals (*welcome modal*, *game over modal*, *congratulations modal*) in this game are important. It is in the modals the user gets information about the game and also have the possibility to choose difficulty level.
 
-  * The welcome and information modal pops when the game starts. It includes all the information the user needs to play the game (*backstory of the game*, *explanation of rules*, and *choice of difficulty*)
+  * The welcome modal pops when the game starts. It includes all the information the user needs to play the game (*backstory of the game*, *explanation of rules*, and *choice of difficulty*). This modal also pops when the user clicks the i-icon in the scoreboard area.
   
   ![Modal Welcome](readme/assets/images/modal_welcome.png)
-
-  * The information modal that pops when the user clicks the *i* icon in the scoreboard menu is the same as the welcome modal besides one added *back to game* button if the user doesn't want to restart the game.
-
-  ![Modal Welcome](readme/assets/images/modal_information.png)
   
-  * The game over modal gives the user information about loosing the game but also gives the user the possibility to try again by pressing one of the difficulty level buttons.
+  * The game over modal gives the user information about loosing the game but also gives the user the possibility to get back to the welcome screen or try again by pressing one of the difficulty level buttons.
   
   ![Modal Game Over](readme/assets/images/modal_game_over.png)
   
-  * The congratulations modal gives the user the information that they have completed the game but also gets the possibility to try again by pressing one of the difficulty level buttons.
+  * The congratulations modal gives the user the information that they have completed the game but also gets the possibility to get back to the welcome screen or try again by pressing one of the difficulty level buttons.
   
   ![Modal Congratulations](readme/assets/images/modal_congratulations.png)
 
