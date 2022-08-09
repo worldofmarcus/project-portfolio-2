@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background-color: #0B0505;
+    background-color: #0b0505;
     font-family: 'Amatic SC', cursive;
     color: #c1bfc6;
     min-height: 100%;
@@ -47,7 +47,7 @@ body {
 /* Scoreboard area */
 .score-board-text {
     color: #0B0505;
-    background-image: linear-gradient(#f4f4f4, #AAA6B2);
+    background-image: linear-gradient(#f4f4f4, #aaa6b2);
     font-size: 1.2rem;
     padding: 10px;
     border-radius: 10px;
@@ -134,8 +134,8 @@ body {
 
 .modal-content {
     font-size: 1.8rem;
-    background-image: linear-gradient(#f4f4f4, #AAA6B2);
-    color: rgba(11, 5, 5);
+    background-image: linear-gradient(#f4f4f4, #aaa6b2);
+    color: #0b0505;
     border: solid 2px #c1bfc6;
 }
 
@@ -154,7 +154,7 @@ body {
     border: none;
     transform: scale(1);
     color: #0B0505;
-    background-image: linear-gradient(#f4f4f4, #AAA6B2);
+    background-image: linear-gradient(#f4f4f4, #aaa6b2);
     font-size: 1.6rem;
     border-radius: 10px;
 }

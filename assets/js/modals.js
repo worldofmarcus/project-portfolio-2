@@ -15,6 +15,7 @@ function closeModals() {
 function gameoverModal() {
     $('#game-over-modal').modal('show');
 }
+
 /** This function shows the congratulationsModal when check has been made that user has found all pair of cards */
 function congratulationsModal() {
     $('#congratulations-modal').modal('show');

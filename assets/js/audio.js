@@ -9,7 +9,6 @@ let audio = {
     complete: new Audio("assets/audio/audio_complete.mp3"),
 };
 
-
 /**
  * Function plays sound when user flips card unless audio.mute is true
  * */

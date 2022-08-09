@@ -6,7 +6,7 @@ let cardOne, cardTwo;
 let difficultyLevel;
 
 /**
- * Function creates array with images and id.
+ * Function creates array with images and id. Code inspired by and adapted from https://youtu.be/-tlb4tv4mC4
  */
 function imageData() {
     return [{
@@ -88,7 +88,7 @@ function levelChoice(event) {
 }
 
 /**
- *  Generate cards to be able to append them to HTML document structure.
+ *  Generate cards to be able to append them to HTML document structure. Code inspired by and adapted from https://marina-ferreira.github.io/tutorials/js/memory-game
  */
 function generateCards() {
     closeModals();
