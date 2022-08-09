@@ -372,6 +372,8 @@ To create a local clone of your repository, follow these steps:
 
 * A lot of reading and experimenting needed to implement [Bootstrap](https://getbootstrap.com/docs/5.2/getting-started/introduction/) functions.
 
+* onLoad modal function taken from [Stack Overflow](https://stackoverflow.com/questions/10233550/launch-bootstrap-modal-on-page-load).
+
 ## Media
 
 * Game background image taken from [FAVPNG](https://favpng.com/png_view/queen-the-evil-queen-female-png/hT1QGRsj) - Used as background in the game area.

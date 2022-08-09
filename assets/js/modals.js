@@ -1,4 +1,6 @@
-/** Show welcome modal when window loads */
+/** Show welcome modal when window loads
+ * Taken from https://stackoverflow.com/questions/10233550/launch-bootstrap-modal-on-page-load
+ */
 $(window).on('load', function () {
     $('#welcome-modal').modal('show');
 });
