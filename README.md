@@ -321,7 +321,7 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 
 3. From the source section drop-down menu, select the main branch (can be master in some cases but for me it was main)
 
-4. Once the main branch has been selected, the page will be automatically refreshed and information about successful deployment / publishing can be seen on screen. The live link can be found [here](https://worldofmarcus.github.io/project-portfolio-1/index.html).
+4. Once the main branch has been selected, the page will be automatically refreshed and information about successful deployment / publishing can be seen on screen. The live link can be found [here](https://worldofmarcus.github.io/project-portfolio-2/).
 
 ![Github Deploy Page 3](readme/assets/images/github_deploy_3.png)
 

@@ -22,3 +22,8 @@ function gameoverModal() {
 function congratulationsModal() {
     $('#congratulations-modal').modal('show');
 }
+
+/** This function shows the welcomeModal when user chooses that option in game over and congratulation modal */
+function instructionModal() {
+    $('#instructions-modal').modal('show');
+}

@@ -135,9 +135,7 @@
                 <p> Click the back to game button or choose difficulty below to start the game and best of
                     luck on your quest!
                 </p>
-
-
-            </div>
+          </div>
             <div class="modal-footer justify-content-center">
                 <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
                     id="level-easy-instructions"><span>Easy (12 tries) </span></button>
@@ -145,16 +143,14 @@
                     id="level-medium-instructions"><span>Medium (8 tries) </span></button>
                 <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
                     id="level-hard-instructions"><span>Hard (5 tries)</span></button>
-                <button type="button" class="modal-button" data-dismiss="modal" onclick="closeModals()"><span>Back to
-                        game </span></button>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Game Over Modal (this modal is being called when the user has no more tries left) -->
-<div class="modal fade" id="game-over-modal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="game-over-modal"
-    aria-hidden="true">
+<div class="modal fade" id="game-over-modal" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="game-over-modal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
@@ -175,6 +171,9 @@
                     id="level-medium-game-over"><span>Medium (8 tries) </span></button>
                 <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
                     id="level-hard-game-over"><span>Hard (5 tries) </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal"
+                    onclick="closeModals(); instructionModal()"><span>Back to start page ( <i
+                            class="fa-solid fa-circle-info"></i> )</span></button>
             </div>
         </div>
     </div>
@@ -204,6 +203,10 @@
                     id="level-medium-congratulations"><span>Medium (8 tries) </span></button>
                 <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
                     id="level-hard-congratulations"><span>Hard (5 tries) </span></button>
+
+                <button type="button" class="modal-button" data-dismiss="modal"
+                    onclick="closeModals(); instructionModal()"><span>Back to start page ( <i
+                            class="fa-solid fa-circle-info"></i> )</span></button>
             </div>
         </div>
     </div>

@@ -57,7 +57,6 @@ body {
 
 .points,
 .tries,
-.rounds,
 .scoreboard-button-area,
 .sound-button {
     padding: .7rem .7rem .7rem .7rem;
@@ -66,7 +65,6 @@ body {
 .score-board-button {
     cursor: pointer;
     border: none;
-
     transform: scale(1);
 
 }
@@ -79,14 +77,14 @@ body {
 /* Game area */
 .game-background {
     background: url("../images/game_background.webp") center center/contain no-repeat;
-    padding: 200px 0;
+    padding: 100px 0;
 }
 
 #memory-board {
     flex-wrap: wrap;
     display: flex;
     margin: auto;
-    padding: 100px 0 0 0;
+    padding: 50px 0 0 0;
     justify-content: center;
     perspective: 1000px;
     min-height: 320px;
@@ -187,7 +185,7 @@ body {
 
     .game-background {
         background-size: 100%;
-        padding: 20px 0 0 0;
+        padding: 70px 0 0 0;
     }
 
     .modal-title {
@@ -230,13 +228,24 @@ body {
         padding: 10px;
     }
 
+    .points,
+    .tries,
+    .scoreboard-button-area,
+    .sound-button {
+        padding: .2rem .2rem .2rem .2rem;
+    }
+
     .card {
         width: 57px;
         height: 85px;
     }
 
     .game-background {
-        background-size: 90%;
+        background: none;
+        padding: 0px;
+    }
+
+    #memory-board {
         padding: 0px;
     }
 
