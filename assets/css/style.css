@@ -207,8 +207,17 @@ body {
     }
 }
 
-/* Devices with max-width: 360px */
-@media (max-width: 360px) {
+/* Devices with max-width: 375px */
+@media (max-width: 375px) {
+
+    .game-background {
+        background: none;
+        padding: 0px;
+    }
+
+    #memory-board {
+        padding: 0px;
+    }
 
     .card {
         width: 77px;
@@ -238,15 +247,6 @@ body {
     .card {
         width: 57px;
         height: 85px;
-    }
-
-    .game-background {
-        background: none;
-        padding: 0px;
-    }
-
-    #memory-board {
-        padding: 0px;
     }
 
     #modal-welcome-code-institute,
