@@ -110,16 +110,6 @@ function generateCards() {
         card.appendChild(back);
         card.addEventListener('click', userFlippedCard);
     });
-    //Check the level difficulty user has chosen and update triesLeft in scoreboard
-    let triesLeft = difficultyLevel;
-    if (difficultyLevel === "level-easy" || difficultyLevel === "level-easy-instructions" || difficultyLevel === "level-easy-game-over" || difficultyLevel === "level-easy-congratulations") {
-        triesLeft = 12;
-    } else if (difficultyLevel === "level-medium" || difficultyLevel === "level-medium-instructions" || difficultyLevel === "level-medium-game-over" || difficultyLevel === "level-medium-congratulations") {
-        triesLeft = 8;
-    } else {
-        triesLeft = 5;
-    }
-    parseInt(document.getElementById('tries-left').innerText = triesLeft);
 }
 
 /**
@@ -218,9 +208,9 @@ function newGame() {
     });
     //Check the level difficulty user has chosen and update triesLeft in scoreboard
     let triesLeft = difficultyLevel;
-    if (difficultyLevel === "level-easy-instructions" || difficultyLevel === "level-easy-game-over" || difficultyLevel === "level-easy-congratulations") {
+    if (difficultyLevel === "level-easy" || difficultyLevel === "level-easy-instructions" || difficultyLevel === "level-easy-game-over" || difficultyLevel === "level-easy-congratulations") {
         triesLeft = 12;
-    } else if (difficultyLevel === "level-medium-instructions" || difficultyLevel === "level-medium-game-over" || difficultyLevel === "level-medium-congratulations") {
+    } else if (difficultyLevel === "level-medium" || difficultyLevel === "level-medium-instructions" || difficultyLevel === "level-medium-game-over" || difficultyLevel === "level-medium-congratulations") {
         triesLeft = 8;
     } else {
         triesLeft = 5;

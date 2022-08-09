@@ -29,16 +29,18 @@
         <!-- Scoreboard points and tries -->
         <div class="d-flex">
             <div class="points">
+                <!-- Initalize points to 0 -->
                 <div class="score-board-text">Points: <span id="number-of-points">0</span></div>
             </div>
             <div class="tries">
-                <div class="score-board-text">Tries left: <span id="tries-left"></span></div>
+                <!-- Initalize tries to level 'easy' (becomes start value if user clicks outside welcome modal without choosing difficulty level) -->
+                <div class="score-board-text">Tries left: <span id="tries-left">12</span></div>
             </div>
         </div>
         <!-- Scoreboard information and sound toggle button -->
         <div class="d-flex float-right">
             <div class="scoreboard-button-area">
-                <button class="score-board-text score-board-button" onclick="$('#instructions-modal').modal('show')"
+                <button class="score-board-text score-board-button" onclick="$('#welcome-modal').modal('show')"
                     aria-label="Button that opens welcome window"><span><i
                             class="fa-solid fa-circle-info"></i></span></button>
             </div>
@@ -62,8 +64,8 @@
 <!-- Modals area-->
 
 <!-- Welcome Modal (this modal is being launched when the page loads) -->
-<div class="modal fade" id="welcome-modal" tabindex="-1" role="dialog" aria-labelledby="welcome-modal"
-    aria-hidden="true">
+<div class="modal fade" id="welcome-modal" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="welcome-modal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
@@ -91,59 +93,15 @@
                     Choose difficulty below to start the game and best of
                     luck on your quest!
                 </p>
-
             </div>
             <div class="modal-footer justify-content-center">
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); generateCards()" id="level-easy"><span>Easy (12 tries) </span></button>
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); generateCards()" id="level-medium"><span>Medium (8 tries)
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-easy"><span>Easy (12 tries) </span></button>
+                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
+                    id="level-medium"><span>Medium (8 tries)
                     </span></button>
-                <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="levelChoice(this); generateCards()" id="level-hard"><span>Hard (5 tries) </span></button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Instructions Modal (this modal is being launched when the user clicks on the instruction button in the scoreboard area) -->
-<div class="modal fade" id="instructions-modal" tabindex="-1" role="dialog" aria-labelledby="instructions-modal"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header justify-content-center">
-                <h5 class="modal-title">Memory of Queen Oblivion</h5>
-            </div>
-            <div class="modal-body text-justify">
-                <p id="modal-instructions-code-institute">
-                    Welcome to 'Memory of Queen Oblivion', a game created for Portfolio Project #2 (JavaScript) -
-                    Diploma in Full Stack Software Development Diploma at the <a href="https://codeinstitute.net/se/"
-                        target="_blank">Code Institute.</a>
-                </p>
-                <p>
-                    Now I need your help! And I need it fast! The evil queen of Oblivion has stolen my precious diamond
-                    and all my keys that goes to the castles of my kingdom. She has cast a spell and the diamond and
-                    keys are now trapped inside a set of cards.
-                    The only way you can help me is to find all of the matching cards!
-                </p>
-                <p>
-                    If you want to read this text during the game, just click the <span><i
-                            class="fa-solid fa-circle-info"></i></span> in the gaming menu, next to
-                    that icon you can also toggle sound on/off by clicking <span><i
-                            class="fa-solid fa-volume-high"></i></span>.
-                </p>
-                <p>
-                    Choose difficulty below to start the game and best of
-                    luck on your quest!
-                </p>
-            </div>
-            <div class="modal-footer justify-content-center">
                 <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
-                    id="level-easy-instructions"><span>Easy (12 tries) </span></button>
-                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
-                    id="level-medium-instructions"><span>Medium (8 tries) </span></button>
-                <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
-                    id="level-hard-instructions"><span>Hard (5 tries)</span></button>
+                    id="level-hard"><span>Hard (5 tries) </span></button>
             </div>
         </div>
     </div>
@@ -173,7 +131,7 @@
                 <button type="button" class="modal-button" data-dismiss="modal" onclick="levelChoice(this); newGame()"
                     id="level-hard-game-over"><span>Hard (5 tries) </span></button>
                 <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="closeModals(); instructionModal()"><span>Back to start page ( <i
+                    onclick="closeModals(); welcomeModal()"><span>Back to start page ( <i
                             class="fa-solid fa-circle-info"></i> )</span></button>
             </div>
         </div>
@@ -206,7 +164,7 @@
                     id="level-hard-congratulations"><span>Hard (5 tries) </span></button>
 
                 <button type="button" class="modal-button" data-dismiss="modal"
-                    onclick="closeModals(); instructionModal()"><span>Back to start page ( <i
+                    onclick="closeModals(); welcomeModal()"><span>Back to start page ( <i
                             class="fa-solid fa-circle-info"></i> )</span></button>
             </div>
         </div>
