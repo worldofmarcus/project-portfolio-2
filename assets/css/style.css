@@ -45,6 +45,7 @@ body {
 }
 
 /* Scoreboard area */
+
 .score-board-text {
     color: #0B0505;
     background-image: linear-gradient(#f4f4f4, #aaa6b2);
@@ -65,7 +66,9 @@ body {
 .score-board-button {
     cursor: pointer;
     border: none;
+
     transform: scale(1);
+
 }
 
 .score-board-button:hover {
@@ -78,7 +81,7 @@ body {
     background: url("../images/game_background.webp") center center/contain no-repeat;
     padding: 200px 0;
 }
- 
+
 #memory-board {
     flex-wrap: wrap;
     display: flex;
@@ -165,17 +168,18 @@ body {
 }
 
 /* ==============
-   media queries
+   Media queries
    ============== */
 
-@media (max-width: 690px) {
+/* Devices with max-width: 420px */
+@media (max-width: 420px) {
 
-    .game-background {
-        padding-top: 100px;
+    .score-board-text {
+
+        font-size: 0.9rem;
+        padding: 10px;
     }
-}
 
-@media (max-width: 410px) {
     .card {
         width: 82px;
         height: 110px;
@@ -183,37 +187,69 @@ body {
 
     .game-background {
         background-size: 100%;
-        padding: 90px 0 0 0;
+        padding: 20px 0 0 0;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-content {
+        font-size: 1.2rem;
+
+    }
+
+    #modal-welcome-code-institute,
+    #modal-instructions-code-institute {
+        font-size: 1.0rem;
+    }
+
+    .modal-button {
+        font-size: 1.2rem;
     }
 }
 
-@media (max-width: 325px) {
+/* Devices with max-width: 360px */
+@media (max-width: 360px) {
+
     .card {
-        width: 60px;
-        height: 88px;
+        width: 77px;
+        height: 105px;
+    }
+
+    .modal-button {
+        font-size: 1.0rem;
+    }
+}
+
+/* Devices with max-width: 320px */
+@media (max-width: 320px) {
+
+    .score-board-text {
+        font-size: 0.7rem;
+        padding: 10px;
+    }
+
+    .card {
+        width: 57px;
+        height: 85px;
     }
 
     .game-background {
-        padding: 80px 0 0 0;
-    }
-}
-
-#memory-board {
-    padding: 0 0 0 0;
-}
-
-@media (max-width: 319px) {
-    .card {
-        width: 50px;
-        height: 78px;
+        background-size: 90%;
+        padding: 0px;
     }
 
-    .game-background {
-        background: none;
-        padding: 0 0 0 0;
+    #modal-welcome-code-institute,
+    #modal-instructions-code-institute {
+        font-size: 0.8rem;
     }
-}
 
-#memory-board {
-    padding: 0 0 0 0;
+    .modal-title {
+        font-size: 1.2rem;
+    }
+
+    .modal-content {
+        font-size: 1.0rem;
+    }
 }

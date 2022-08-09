@@ -73,7 +73,7 @@ The 'Memory of Queen Oblivion' application has four different type of areas (see
 ![Color Palette image](readme/assets/images/coolors_palette.png)
 
 * ### Typography
-  The fonts used for the game are 'Kaushan Script' and 'Amatic SC'. Fallback font for both of them is sans-serif. T
+  The fonts used for the game are 'Kaushan Script' and 'Amatic SC'. Fallback font for both of them is sans-serif.
 
   * 'Kaushan Script' is used for the game logo and the scoreboard. It is little bit harder to read than a more regular font like Amatic SC but I wanted to use it because it fits the mysterious / fairy-tale context better.
 
@@ -291,7 +291,7 @@ Additional testing of the application was conducted by people outside of the sof
 ![HTML Result Form Confirmation With Errors](readme/assets/images/favico_bug.png)
 
 **2022-08-08**
-* Bug: During the HTML-validation 13 warnings and 12 errors reported from the validator. 3 warnings was connected to no h1 in document and use of sections. This was fixed by changing the sections do divs. The rest of the warnings and errors was connected to a mistake with duplicate id:s in the modal code. That was very easy to fix and when the page was re-run in the validator no errors were returned.
+* Bug: During the HTML-validation 13 warnings and 12 errors were reported from the validator. 3 warnings was connected to no h1 in document and use of sections. This was fixed by changing the sections do divs. The rest of the warnings and errors was connected to a mistake with duplicate id:s in the modal code. That was very easy to fix and when the page was re-run in the validator no errors were returned.
 
 ![HTML Result Form Confirmation With Errors](readme/assets/images/html_result_with_errors.png)
 
