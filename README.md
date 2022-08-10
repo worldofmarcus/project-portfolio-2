@@ -67,7 +67,7 @@ The 'Memory of Queen Oblivion' application has four different type of areas (see
 * [Game Area](<#game-area>)
 * [Modals Area](<#modals>) 
 
-# Design Choices
+## Design Choices
 
 * ### Color Scheme
   The color scheme chosen for 'Memory of Queen Oblivion' was extracted from the background image for the game with the online service [Coolors](https://coolors.co/). The colors are a mix of different shades of gray, Smoky black and a red tone called Rosewood. All colors are very straight forward and in the darker spectrum of colors. The reason why I chose these darker tones was because of the game story and game type. I wanted the feeling to be a little bit mysterious. Though the colors are quite dark they still offer good readability and contrast.
