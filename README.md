@@ -240,11 +240,11 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 
 | Phone      | Galaxy S5/S6/S7       | iPhone 6/7/8       | iPhone 12pro         |
 |------------|-----------------------|--------------------|----------------------|
-| Render     | pass                  | pass               | pass      | pass     | 
-| Images.    | pass                  | pass               | pass      | pass     | 
-| Links      | pass                  | pass               | pass      | pass     | 
+| Render     | pass                  | pass               | pass                 | 
+| Images.    | pass                  | pass               | pass                 |
+| Links      | pass                  | pass               | pass                 |
 
-*Comment: To keep the design together on wider screens the content of the site is restricted to 1280px.*
+*Comment: Scrolling is needed to some extent on some of the smaller screens*
 
 [Back to top](<#table-of-content>)
 
