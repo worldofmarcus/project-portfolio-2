@@ -46,19 +46,21 @@ The game was created for Portfolio Project #2 (JavaScript) - Diploma in Full Sta
 The user of 'Memory of Queen Oblivion' wants to play a fun round of memory that is intuitive, has a nice visual design and is quite challenging.
 
 ## **Site Owners Goal**
-The goal of the site is to spread joy to users in all ages by delivering a memory game with an intuitive interface and nice visual- an sound design.
+The goal of the site is to spread joy to users in all ages by delivering a memory game with an intuitive interface and nice visual- and sound design.
 
 [Back to top](<#table-of-content>)
 
 # User Experience (UX)
 
 ## Wireframes
-The wireframes for the game 'Memory of Queen Oblivion' were created in the software [Balsamiq](https://balsamiq.com). The wireframes have been created for desktop, tablet and mobile devices. The text content wasn't finalized during the wireframe process. There are some visual visual differences compared to the wireframes, the reason being design choices that I made during the creation process.
+The wireframes for the game 'Memory of Queen Oblivion' were created in the software [Balsamiq](https://balsamiq.com). The wireframes have been created for desktop, tablet and mobile devices. The text content wasn't finalized during the wireframe process. There are some visual visual differences compared to the wireframes, the reason being design choices that was made during the creation process.
 
 ![Wireframes](readme/assets/images/memory_of_queen_oblivion_mockup_v0.9.png)
 
+[Back to top](<#table-of-content>)
+
 ## Site Structure
-The 'Memory of Queen Oblivion' application has four different type of areas (see links below). *Logo area* in the top, *Score board area*, *Game Area* and the different *Modals* that is being shown depending on where in the game the user is. Read more about each part by following the links below.
+The 'Memory of Queen Oblivion' application has four different type of areas (see links below). *Logo area* in the top, *Score board area*, *Game Area* and the different *Modals* that is being shown depending on where in the game the user is. You can read more about each part in the [Existing Features](<#existing-features>) section or by following the links below.
 
 * [Logo Area](<#logo-area>)
 * [Scoreboard Area](<#scoreboard-area>) 
@@ -68,16 +70,16 @@ The 'Memory of Queen Oblivion' application has four different type of areas (see
 # Design Choices
 
 * ### Color Scheme
-  The color scheme chosen for 'Memory of Queen Oblivion' was extracted from the background image for the game with the online service[Coolors](https://coolors.co/image-picker). The coolors are a mix of different shades of gray, Smoky black and a more red tone called Rosewood. Quite straight forward colors that all are in the darker spectrum of colors. Th reason why I chose a darker tone was because of the game story and game type. I wanted the feeling to be a little bit mysterious. Though the colors are quite dark there is still good readability and contrast.
+  The color scheme chosen for 'Memory of Queen Oblivion' was extracted from the background image for the game with the online service [Coolors](https://coolors.co/). The colors are a mix of different shades of gray, Smoky black and a red tone called Rosewood. All colors are very straight forward and in the darker spectrum of colors. The reason why I chose these darker tones was because of the game story and game type. I wanted the feeling to be a little bit mysterious. Though the colors are quite dark they still offer good readability and contrast.
   
 ![Color Palette image](readme/assets/images/coolors_palette.png)
 
 * ### Typography
   The fonts used for the game are 'Kaushan Script' and 'Amatic SC'. Fallback font for both of them is sans-serif.
 
-  * 'Kaushan Script' is used for the game logo and the scoreboard. It is little bit harder to read than a more regular font like Amatic SC but I wanted to use it because it fits the mysterious / fairy-tale context better.
+  * 'Kaushan Script' is used for the game logo and the scoreboard. The font is a little bit harder to read than a more regular font like Amatic SC but I wanted to use it because it fits the mysterious / fairy-tale context better.
 
-  * 'Amatic SC' was chosen for all the text besides the logo. It has a little bit of hand-written style to it which I really liked. It fits the game perfectly!
+  * 'Amatic SC' was chosen for all the text besides the logo and the scoreboard. It has a little bit of hand-written style to it which I really liked. It fits the game perfectly!
 
 ![Google Fonts Kaushan Script](readme/assets/images/google_fonts_kaushan_script.png)
 ![Google Fonts Amatic SC](readme/assets/images/google_fonts_amatic_sc.png)
@@ -85,7 +87,7 @@ The 'Memory of Queen Oblivion' application has four different type of areas (see
 [Back to top](<#table-of-content>)
 
 # **Features**
-The features in the game are very straight forward. For me it was important with a intuitive interface that works the way the user expects it to. Some examples of features in the game are *choose difficulty level*, *toggle sound on/off*, *sound effects and animations to make it clear when user has clicked on the memory cards* and *possibility to always open start window from scoreboard menu*.
+The features in the game are very straight forward. For me it was important with an intuitive interface that works the way the user expects it to. Some examples of features in the game are *choose difficulty level*, *toggle sound on/off*, *sound effects and animations to make it clear when user has clicked on the memory cards* and *possibility to always open the start window from the scoreboard menu*.
 
 ## **Existing Features**
 
@@ -101,11 +103,11 @@ The features in the game are very straight forward. For me it was important with
 
  ![Scoreboard Area](readme/assets/images/scoreboard_area.png)
 
-  * The scoreboard area includes a points counter that adds +1 for every try to match card the user does. It also includes a tries left counter that subtracts -1 for every failed matching of cards. The initial value of the tries left counter is connected to the users choice of difficulty in the modal windows (see [modals](<#modals>) below). The different difficultys are: *easy: 12 tries*, *medium: 8 tries*, *hard: 5 tries*.
+  * The scoreboard area includes a points counter that adds +1 for everytime the user try to match two cards. It also includes a tries left counter that subtracts -1 for every failed matching of cards. The initial value of the tries left counter is 12. The reason for that is if the user clicks outside the welcome modal (without choosing difficulty level) the game will be started in easy-mode. In most cases the user choice difficulty level in the modal windows (see [modals](<#modals>) below). The different difficultys are: *easy: 12 tries*, *medium: 8 tries*, *hard: 5 tries*.
   
   * The scoreboard area also includes two clickable buttons, one *information button* and one *sound toggle on/off button*
 
-  * This scoreboard area will help the user to get updated about the game round and also get the possibility to re-visit the start screen through the information button and also turn on/off the sound in the game.
+  * The scoreboard area will help the user to get updated about the game round and also get the possibility to re-visit the start screen through the information button and also turn on/off the sound in the game.
 
 [Back to top](<#table-of-content>)
 
@@ -113,9 +115,9 @@ The features in the game are very straight forward. For me it was important with
 
  ![Game Area](readme/assets/images/game_area.png)
 
-  * The game area is the area the user have the most interaction with. It consists of 12 memory cards that are clickable. The user needs to click two cards after each other to see if they match. When the user clicks a card a flip animation is triggered. If the cards match they stay flipped but if the don't match they flip back. If the user has no tries left the *game over modal* will open and if the user finds all matching cards the *congratulations modal will open*.
+  * The user has most interaction with the game area. It consists of 12 memory cards that are clickable. The user needs to click two cards after each other to see if they match. When the user clicks a card a flip animation is triggered. If the cards match they stay flipped but if the don't match they flip back. If the user has no tries left the *game over modal* will open and if the user finds all matching cards the *congratulations modal will open*.
 
-  * After each round or when the user starts a new game the cards are randomized so that the images isn't on the same location every round.
+  * After each round or when the user starts a new game the cards are randomized so that the images aren't on the same location every round.
 
   * There are also sound effects playing when the user *clicks the card*, *no match*, *match*, *game over* and *congratulations*.
 
@@ -157,7 +159,7 @@ The features in the game are very straight forward. For me it was important with
 
 ## Frameworks, Libraries & Software
 
-* [Adobe Photoshop](https://www.adobe.com/se/products/photoshop.html) - used to manipulate the background image and to create the memory cards.
+* [Adobe Photoshop](https://www.adobe.com/se/products/photoshop.html) - used to manipulate the background image and to create the memory cards and logo.
 * [Am I Responsive](https://ui.dev/amiresponsive) - used to create presentation of responsive design.
 * [Balsamiq](https://balsamiq.com/wireframes/) - used to create the wireframes.
 * [Bootstrap](https://getbootstrap.com/) - used for modals in game
@@ -179,10 +181,10 @@ The features in the game are very straight forward. For me it was important with
 # Testing
 
 ## Code Validation
-The 'Memory of Queen Oblivion'-application has been tested through both [W3C html Validator](https://validator.w3.org/), [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and [JSHint](https://jshint.com/). Errors were found on index.html but could quite easily be fixed (see [bugs section](#known-bugs)).
+The 'Memory of Queen Oblivion'-application has been tested through both [W3C Markup Validaton Service](https://validator.w3.org/), [W3C CSS Validaton Service](https://jigsaw.w3.org/css-validator/) and [JSHint](https://jshint.com/). Errors were found on index.html in the W3C Markup Validaton Servicebut could quite easily be fixed (see [bugs section](#known-bugs)).
 
-### HTML Validator
-The HTML validator results for each page, after fixing the minor errors can be seen below:
+### Markup Validation
+The Markup validator result, after fixing the minor errors can be seen below:
 
 * Home Page
 
@@ -192,7 +194,7 @@ No errors were returned when passing through the official W3C validator.
 
 [Back to top](<#table-of-content>)
 
-### CSS Validator
+### CSS Validaton
 The CSS validator results can be seen below:
 
 No errors were returned when passing through the official W3C validator.
@@ -261,21 +263,21 @@ Creative Dreams website was tested for responsiveness, functionality and appeara
 
 ### WAVE
 
-[WAVE](https://wave.webaim.org/) was used to check accessibility. 0 errors and 1 alerts was found. The alert was connected to the page lacks a h1 (which is not a problem because the game has a headline image).
+[WAVE](https://wave.webaim.org/) was used to check accessibility. 0 errors and 1 alerts was found. The alert was connected to page lacking a h1 (which is not a problem because the game has a headline image).
 
 ![WAVE Result](readme/assets/images/wave_result.png)
 
 [Back to top](<#table-of-content>)
 
 ### Lighthouse
-[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome Developer Tools was used to test the application within the areas of *Performance*, *Accessibility*, *Best Practices* and *SEO*. The testing showed that the *Accessability*, *Best Practices* and *SEO* was 100%. The Performance fluctuated between 75 and 90. To handle this I first compressed the *.png files and then also converted them to *.webp. After that i managed to squeeze the performance up to 88. I think the performance also ias affected by the external scripts (connected to i.e. Bootstrap).
+[Google Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome Developer Tools was used to test the application within the areas of *Performance*, *Accessibility*, *Best Practices* and *SEO*. The testing showed that the *Accessability*, *Best Practices* and *SEO* was 100%. The Performance fluctuated between 75 and 90. To handle this I first compressed the *.png files and then also converted them to *.webp. After that I managed to squeeze the performance up to 88. I think the performance also is affected by the external scripts (connected to i.e. Bootstrap).
 
 ![Lighthouse Form Confirmation Page Result](readme/assets/images/lighthouse_result.png)
 
 [Back to top](<#table-of-content>)
 
 ### Peer Review
-Additional testing of the application was conducted by people outside of the software development field. Some spelling and grammar errors were found and corrected. No issues connected to gaming experiences and visual design was reported.
+Additional testing of the application was conducted by people outside of the software development field. Some spelling and grammar errors were found and corrected. No issues connected to gaming experience and visual design was reported.
 
 ## Known bugs
 
@@ -287,20 +289,25 @@ Additional testing of the application was conducted by people outside of the sof
 ![HTML Result Form Confirmation With Errors](readme/assets/images/favico_bug.png)
 
 **2022-08-08**
-* Bug: During the HTML-validation 13 warnings and 12 errors were reported from the validator. 3 warnings was connected to no h1 in document and use of sections. This was fixed by changing the sections do divs. The rest of the warnings and errors was connected to a mistake with duplicate id:s in the modal code. That was very easy to fix and when the page was re-run in the validator no errors were returned.
+* Bug: During the HTML-validation 13 warnings and 12 errors were reported from the validator. 3 warnings were connected to no h1 in document and use of sections. This was fixed by changing the sections to divs. The rest of the warnings and errors were connected to a mistake with duplicate id:s in the modal code. That was very easy to fix and when the page was re-run in the validator no errors were returned.
 
 ![HTML Result Form Confirmation With Errors](readme/assets/images/html_result_with_errors.png)
 
+**2022-08-09**
+* Bug: In the first version of the game the cards weren't generated before the welcome modal was shown. The outcome of that was that the user could by mistake press outside the modal and then the cards didn't generate. This was solved byt generating the cards before the modal pops.
+
 **2022-08-10**
-* Bug: During lighthouse testing the *Accessibility*, *Best Practices* and *SEO* was 92 due to lack of alt text on the images in the game and faulty image aspect ratio. I fixed this by adding the attribute alt with its correct name when looping the image array. The image aspect ratio was corrected by using Photoshop to secure correct image aspect ratio when shrinking the images (mainly in the media query code).
+* Bug: During lighthouse testing the *Accessibility*, *Best Practices* and *SEO* grade was 92 due to lack of alt text on the images in the game and faulty image aspect ratio. I fixed the alt text problem by adding the attribute alt with its correct name when looping the image array. The image aspect ratio was corrected by using Photoshop to secure correct image aspect ratio when shrinking the images (mainly in the media query code).
 
 ### Unfixed Bugs
+
 **2022-08-08**
 * Bug: When clicking outside of the 'Game Over'-modal the reset of the game doesn't work which mean that the 'Number of tries' continue to subtract even if the user has 0 tries left. See screenshot below. This is something that can be fixed by setting the modal backdrop to static. This isn't a critical bug and due to coming deadline for this project I will leave it unfixed for now.
 
 ![HTML Result Form Confirmation With Errors](readme/assets/images/bug_tries_left_modal.png)
 
 [Back to top](<#table-of-content>)
+
 # Deployment
 
 ## To Deploy The Project
