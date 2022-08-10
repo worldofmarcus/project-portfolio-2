@@ -92,7 +92,7 @@ body {
 
 .card {
     width: 115px;
-    height: 192px; /* old 155 px */
+    height: 192px;
     margin: 5px;
     position: relative;
     background: transparent;

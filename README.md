@@ -261,7 +261,7 @@ Creative Dreams website was tested for responsiveness, functionality and appeara
 
 ### WAVE
 
-[WAVE](https://wave.webaim.org/) was used to check accessibility. 0 errors and 2 alerts was found. The first alert was connected to a warning of redundant links (but they are in different modals so it's not an issue). The second alert was connected to the page lacks a h1 (which is not a problem because the game has a headline image).
+[WAVE](https://wave.webaim.org/) was used to check accessibility. 0 errors and 1 alerts was found. The alert was connected to the page lacks a h1 (which is not a problem because the game has a headline image).
 
 ![WAVE Result](readme/assets/images/wave_result.png)
 
@@ -290,6 +290,9 @@ Additional testing of the application was conducted by people outside of the sof
 * Bug: During the HTML-validation 13 warnings and 12 errors were reported from the validator. 3 warnings was connected to no h1 in document and use of sections. This was fixed by changing the sections do divs. The rest of the warnings and errors was connected to a mistake with duplicate id:s in the modal code. That was very easy to fix and when the page was re-run in the validator no errors were returned.
 
 ![HTML Result Form Confirmation With Errors](readme/assets/images/html_result_with_errors.png)
+
+**2022-08-10**
+* Bug: During lighthouse testing the *Accessibility*, *Best Practices* and *SEO* was 92 due to lack of alt text on the images in the game and faulty image aspect ratio. I fixed this by adding the attribute alt with its correct name when looping the image array. The image aspect ratio was corrected by using Photoshop to secure correct image aspect ratio when shrinking the images (mainly in the media query code).
 
 ### Unfixed Bugs
 **2022-08-08**
