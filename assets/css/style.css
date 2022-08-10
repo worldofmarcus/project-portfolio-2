@@ -92,7 +92,7 @@ body {
 
 .card {
     width: 115px;
-    height: 155px;
+    height: 192px; /* old 155 px */
     margin: 5px;
     position: relative;
     background: transparent;
@@ -180,7 +180,7 @@ body {
 
     .card {
         width: 82px;
-        height: 111px;
+        height: 137px;
     }
 
     .game-background {
@@ -221,7 +221,7 @@ body {
 
     .card {
         width: 77px;
-        height: 104px;
+        height: 128px;
     }
 
     .modal-button {
@@ -246,7 +246,7 @@ body {
 
     .card {
         width: 57px;
-        height: 77px;
+        height: 95px;
     }
 
     #modal-welcome-code-institute,
