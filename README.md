@@ -53,14 +53,14 @@ The goal of the site is to spread joy to users in all ages by delivering a memor
 # User Experience (UX)
 
 ## Wireframes
-The wireframes for the game 'Memory of Queen Oblivion' were created in the software [Balsamiq](https://balsamiq.com). The wireframes have been created for desktop, tablet and mobile devices. The text content wasn't finalized during the wireframe process. There are some visual visual differences compared to the wireframes, the reason being design choices that was made during the creation process.
+The wireframes for the game 'Memory of Queen Oblivion' were created in the software [Balsamiq](https://balsamiq.com). The wireframes have been created for desktop, tablet and mobile devices. The text content wasn't finalized during the wireframe process. There are some visual differences compared to the wireframes, the reason being design choices that was made during the creation process.
 
 ![Wireframes](readme/assets/images/memory_of_queen_oblivion_mockup_v0.9.png)
 
 [Back to top](<#table-of-content>)
 
 ## Site Structure
-The 'Memory of Queen Oblivion' application has four different type of areas (see links below). *Logo area* in the top, *Score board area*, *Game Area* and the different *Modals* that is being shown depending on where in the game the user is. You can read more about each part in the [Existing Features](<#existing-features>) section or by following the links below.
+The 'Memory of Queen Oblivion' game has four different type of areas. *Logo Area* in the top, *Scoreboard Area*, *Game Area* and the different *Modals* that is being shown depending on where in the game the user is. You can read more about each part in the [Existing Features](<#existing-features>) section or by following the links below.
 
 * [Logo Area](<#logo-area>)
 * [Scoreboard Area](<#scoreboard-area>) 
@@ -103,7 +103,7 @@ The features in the game are very straight forward. For me it was important with
 
  ![Scoreboard Area](readme/assets/images/scoreboard_area.png)
 
-  * The scoreboard area includes a points counter that adds +1 for everytime the user try to match two cards. It also includes a tries left counter that subtracts -1 for every failed matching of cards. The initial value of the tries left counter is 12. The reason for that is if the user clicks outside the welcome modal (without choosing difficulty level) the game will be started in easy-mode. In most cases the user choice difficulty level in the modal windows (see [modals](<#modals>) below). The different difficultys are: *easy: 12 tries*, *medium: 8 tries*, *hard: 5 tries*.
+  * The scoreboard area includes a points counter that adds +1 everytime the user try to match two cards. It also includes a tries left counter that subtracts -1 for every failed matching of cards. The initial value of the tries left counter is 12. The reason for that is if the user clicks outside the welcome modal (without choosing difficulty level) the game will be started in easy-mode. In most cases the user choice difficulty level in the modal windows (see [modals](<#modals>) below). The different difficultys are: *easy: 12 tries*, *medium: 8 tries*, *hard: 5 tries*.
   
   * The scoreboard area also includes two clickable buttons, one *information button* and one *sound toggle on/off button*
 
@@ -162,7 +162,7 @@ The features in the game are very straight forward. For me it was important with
 * [Adobe Photoshop](https://www.adobe.com/se/products/photoshop.html) - used to manipulate the background image and to create the memory cards and logo.
 * [Am I Responsive](https://ui.dev/amiresponsive) - used to create presentation of responsive design.
 * [Balsamiq](https://balsamiq.com/wireframes/) - used to create the wireframes.
-* [Bootstrap](https://getbootstrap.com/) - used for modals in game
+* [Bootstrap](https://getbootstrap.com/) - used for modals in game.
 * [Coolors](https://coolors.co/) - used to extract colors from background image as foundation for color palette.
 * [Convertio](https://convertio.co/jpg-webp/) - used to convert png to webp.
 * [Font Awesome:](https://fontawesome.com/) - used to import icons to the website.
@@ -181,7 +181,7 @@ The features in the game are very straight forward. For me it was important with
 # Testing
 
 ## Code Validation
-The 'Memory of Queen Oblivion'-application has been tested through both [W3C Markup Validaton Service](https://validator.w3.org/), [W3C CSS Validaton Service](https://jigsaw.w3.org/css-validator/) and [JSHint](https://jshint.com/). Errors were found on index.html in the W3C Markup Validaton Servicebut could quite easily be fixed (see [bugs section](#known-bugs)).
+The 'Memory of Queen Oblivion'-game has been tested through [W3C Markup Validaton Service](https://validator.w3.org/), [W3C CSS Validaton Service](https://jigsaw.w3.org/css-validator/) and [JSHint](https://jshint.com/). Errors were found on index.html in the W3C Markup Validaton Serviceb ut could quite easily be fixed (see [bugs section](#known-bugs)).
 
 ### Markup Validation
 The Markup validator result, after fixing the minor errors can be seen below:
@@ -250,7 +250,7 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 
 ## Browser Compatibility
 
-Creative Dreams website was tested for responsiveness, functionality and appearance in the following browsers on desktop, tablet and phone with no visible issues for the user. 
+'Memory of Queen Oblivion' was tested for responsiveness, functionality and appearance in the following browsers on desktop, tablet and phone with no visible issues for the user. 
 
 * Google Chrome Version (103.0.5060.114)
 * Mozilla Firefox (version 102.0.1)
@@ -259,6 +259,7 @@ Creative Dreams website was tested for responsiveness, functionality and appeara
 * Microsoft Edge (version 103.0.1264.62)
 
 [Back to top](<#table-of-content>)
+
 ## Additional Testing
 
 ### WAVE
@@ -289,12 +290,12 @@ Additional testing of the application was conducted by people outside of the sof
 ![HTML Result Form Confirmation With Errors](readme/assets/images/favico_bug.png)
 
 **2022-08-08**
-* Bug: During the HTML-validation 13 warnings and 12 errors were reported from the validator. 3 warnings were connected to no h1 in document and use of sections. This was fixed by changing the sections to divs. The rest of the warnings and errors were connected to a mistake with duplicate id:s in the modal code. That was very easy to fix and when the page was re-run in the validator no errors were returned.
+* Bug: During the Markup validation 13 warnings and 12 errors were reported from the validator. 3 warnings were connected to no h1 in document and use of sections. This was fixed by changing the sections to divs. The rest of the warnings and errors were connected to a mistake with duplicate id:s in the modal code. That was very easy to fix and when the page was re-run in the validator no errors were returned.
 
 ![HTML Result Form Confirmation With Errors](readme/assets/images/html_result_with_errors.png)
 
 **2022-08-09**
-* Bug: In the first version of the game the cards weren't generated before the welcome modal was shown. The outcome of that was that the user could by mistake press outside the modal and then the cards didn't generate. This was solved byt generating the cards before the modal pops.
+* Bug: In the first version of the game the cards weren't generated before the welcome modal was shown. The outcome of that was that the user could by mistake press outside the modal and then the cards didn't generate. This was solved by generating the cards before the modal pops.
 
 **2022-08-10**
 * Bug: During lighthouse testing the *Accessibility*, *Best Practices* and *SEO* grade was 92 due to lack of alt text on the images in the game and faulty image aspect ratio. I fixed the alt text problem by adding the attribute alt with its correct name when looping the image array. The image aspect ratio was corrected by using Photoshop to secure correct image aspect ratio when shrinking the images (mainly in the media query code).
