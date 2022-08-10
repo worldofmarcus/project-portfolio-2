@@ -199,7 +199,6 @@ function newGame() {
     [cardFlipped, gamingBoardLocked] = [false, false];
     [cardOne, cardTwo] = [null, null];
     let gameCardData = randomize();
-    console.log(gameCardData);
     let front = document.querySelectorAll(".front");
     let back = document.querySelectorAll('.back');
     let card = document.querySelectorAll('.card');
