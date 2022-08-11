@@ -181,7 +181,7 @@ The features in the game are very straight forward. For me it was important with
 # Testing
 
 ## Code Validation
-The 'Memory of Queen Oblivion'-game has been tested through [W3C Markup Validaton Service](https://validator.w3.org/), [W3C CSS Validaton Service](https://jigsaw.w3.org/css-validator/) and [JSHint](https://jshint.com/). Errors were found on index.html in the W3C Markup Validaton Serviceb ut could quite easily be fixed (see [bugs section](#known-bugs)).
+The 'Memory of Queen Oblivion'-game has been tested through [W3C Markup Validaton Service](https://validator.w3.org/), [W3C CSS Validaton Service](https://jigsaw.w3.org/css-validator/) and [JSHint](https://jshint.com/). Errors were found on index.html in the W3C Markup Validaton Service but could quite easily be fixed (see [bugs section](#known-bugs)).
 
 ### Markup Validation
 The Markup validator result, after fixing the minor errors can be seen below:
@@ -309,6 +309,8 @@ Additional testing of the application was conducted by people outside of the sof
 
 ![HTML Result Form Confirmation With Errors](readme/assets/images/bug_tries_left_modal.png)
 
+* Bug: Sometimes the sound is flickering or on very low volume when flipping the cards in Safari and it seems to happen randomly. I checked on the web and it seems that there are som problems with sound and Safari in some scenarios. It works perfect in the other tested browsers. This isn't critical and due to coming deadline for this project I will leave it unfixed for now.
+
 [Back to top](<#table-of-content>)
 
 # Deployment
@@ -402,6 +404,6 @@ To create a local clone of your repository, follow these steps:
 # Acknowledgements
 The 'Memory of Queen Oblivion' game was completed as the Portfolio Project #2 (*JavaScript*) for the Full Stack Software Development Diploma at the [Code Institute](https://codeinstitute.net/). I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for relevant feedback during the project.
 
-*Marcus Eriksson 2022-08-08.*
+*Marcus Eriksson 2022-08-10.*
 
 [Back to top](<#table-of-content>)
