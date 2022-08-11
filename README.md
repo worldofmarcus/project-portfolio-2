@@ -404,6 +404,6 @@ To create a local clone of your repository, follow these steps:
 # Acknowledgements
 The 'Memory of Queen Oblivion' game was completed as the Portfolio Project #2 (*JavaScript*) for the Full Stack Software Development Diploma at the [Code Institute](https://codeinstitute.net/). I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for relevant feedback during the project.
 
-*Marcus Eriksson 2022-08-10.*
+*Marcus Eriksson 2022-08-11.*
 
 [Back to top](<#table-of-content>)
