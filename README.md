@@ -278,7 +278,9 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 [Back to top](<#table-of-content>)
 
 ### Peer Review
-Additional testing of the application was conducted by people outside of the software development field. Some spelling and grammar errors were found and corrected. No issues connected to gaming experience and visual design was reported.
+Additional testing of the application was conducted by people outside of the software development field. Some spelling and grammar errors were found and corrected. No issues connected to gaming experience and visual design was reported. Template was used to control the different levels scenarios (see image below).
+
+![Test Scenarios](readme/assets/images/level_scenarios.png)
 
 ## Known bugs
 
