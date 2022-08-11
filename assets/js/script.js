@@ -217,8 +217,11 @@ function newGame() {
         triesLeft = 12;
     } else if (difficultyLevel === "level-medium" || difficultyLevel === "level-medium-instructions" || difficultyLevel === "level-medium-game-over" || difficultyLevel === "level-medium-congratulations") {
         triesLeft = 8;
-    } else {
+    } else if (difficultyLevel === "level-hard" || difficultyLevel === "level-hard-instructions" || difficultyLevel === "level-hard-game-over" || difficultyLevel === "level-hard-congratulations") {
         triesLeft = 5;
+    } else {
+        alert(`Unknown difficulty level: ${difficultyLevel}`);
+        throw `Unknown difficulty level: ${difficultyLevel}. Aborting!`;
     }
     parseInt(document.getElementById('tries-left').innerText = triesLeft);
 }
