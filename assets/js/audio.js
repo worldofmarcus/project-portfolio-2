@@ -67,7 +67,7 @@ function gameCompleteAudio() {
 
 /**
  * Function toggles sound on/off when user clicks volume icon in scoreboard area.
- * Function also changes the class of the audio icon so that the Font Awesome changes
+ * Function also changes the class of the audio icon so that the Font Awesome icon changes
  * */
 function muteAudio() {
     let audioIcon = document.getElementById('audio-icon');

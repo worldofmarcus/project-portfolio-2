@@ -211,7 +211,7 @@ function newGame() {
         front[index].setAttribute('alt', item.id);
         back[index].setAttribute('alt', 'card_back');
     });
-    //Check the level difficulty user has chosen and update triesLeft in scoreboard
+    //Check the level difficulty user has chosen and update triesLeft in scoreboard.
     let triesLeft = difficultyLevel;
     if (difficultyLevel === "level-easy" || difficultyLevel === "level-easy-instructions" || difficultyLevel === "level-easy-game-over" || difficultyLevel === "level-easy-congratulations") {
         triesLeft = 12;
